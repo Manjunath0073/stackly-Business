@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Business — Consulting Built Around Outcomes</title>
+<meta name="description" content="Stackly Business helps growing companies plan, build, and scale — through strategy, operations, and technology engagements measured in outcomes, not hours.">
+<link rel="icon" href="assets/images/logo-stackly.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body data-page="home">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Stackly Business — Home">
+      <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="service.html" class="nav-link" data-nav="service">Services</a></li>
+        <li><a href="blog.html" class="nav-link" data-nav="blog">Blog</a></li>
+        <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  <ul class="mobile-nav-list">
+    <li style="--i:0"><a href="index.html" class="mobile-nav-link" data-nav="home">Home</a></li>
+    <li style="--i:1"><a href="about.html" class="mobile-nav-link" data-nav="about">About</a></li>
+    <li style="--i:2"><a href="service.html" class="mobile-nav-link" data-nav="service">Services</a></li>
+    <li style="--i:3"><a href="blog.html" class="mobile-nav-link" data-nav="blog">Blog</a></li>
+    <li style="--i:4"><a href="contact.html" class="mobile-nav-link" data-nav="contact">Contact</a></li>
+  </ul>
+  <div class="mobile-actions" style="--i:5">
+    <a href="login.html" class="btn btn-outline btn-block">Log in</a>
+    <a href="signup.html" class="btn btn-primary btn-block">Get Started</a>
+  </div>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main id="main">
+
+  <!-- ============================================================
+       1. HERO
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge"><span class="hero-dot"></span> Now booking Q3 engagements</span>
+        <h1 class="hero-title">Consulting measured by <span class="hero-accent" id="rotating-word">outcomes</span>, not hours.</h1>
+        <p class="hero-sub">Stackly Business pairs senior operators with your team to fix the constraint that's actually capping growth — then stays through execution to prove it worked.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary">Book a strategy call <span>→</span></a>
+          <a href="service.html" class="btn btn-outline">See how we work</a>
+        </div>
+        <div class="hero-trustline">
+          <div class="hero-avatars">
+            <span>JK</span><span>MR</span><span>AT</span>
+          </div>
+          <p><strong>120+ founders</strong> have run an engagement with us</p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-emblem">
+          <div class="hero-emblem-glow"></div>
+          <div class="hero-emblem-ring"></div>
+          <div class="hero-emblem-ring hero-emblem-ring--2"></div>
+          <div class="hero-emblem-content">
+            <span class="hero-emblem-since">Since 2020</span>
+            <span class="hero-emblem-stat" data-count="120" data-suffix="+">0+</span>
+            <span class="hero-emblem-label">Engagements delivered</span>
+            <span class="hero-emblem-divider"></span>
+            <span class="hero-emblem-footer">Strategy · Operations · Technology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. TRUST STRIP
+  ============================================================ -->
+  <section class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-strip-label">
+        <span class="trust-strip-dot"></span>
+        Trusted by teams at
+      </div>
+      <div class="trust-marquee">
+        <div class="trust-track">
+          <span>Northwind</span>
+          <span>Hallcrest</span>
+          <span>Veridian</span>
+          <span>Comet Labs</span>
+          <span>Anchorpoint</span>
+          <span>Northwind</span>
+          <span>Hallcrest</span>
+          <span>Veridian</span>
+          <span>Comet Labs</span>
+          <span>Anchorpoint</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. SERVICES — showcase with 4 unique card layouts
+  ============================================================ -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-head reveal" data-reveal="up">
+        <span class="eyebrow">What We Do</span>
+        <h2 class="section-title">Four ways we get involved.</h2>
+        <p class="section-sub">Pick the level of involvement that matches where you are — from a single sharp recommendation to an embedded team.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card service-card--hero" data-service="strategy">
+          <div class="service-card-bg"></div>
+          <div class="service-card-content">
+            <div class="service-card-top">
+              <span class="service-card-num">01</span>
+              <span class="service-card-label">Growth Strategy</span>
+            </div>
+            <h3 class="service-card-title">We map your market so you own the move.</h3>
+            <p class="service-card-desc">We map your market, pressure-test three growth paths, and leave you with one decision to make — not a 60-page deck to interpret.</p>
+            <div class="service-card-stats">
+              <div class="service-card-stat">
+                <span class="service-card-stat-value">3<span class="service-card-stat-suffix">×</span></span>
+                <span class="service-card-stat-label">Avg. growth multiplier</span>
+              </div>
+              <div class="service-card-stat">
+                <span class="service-card-stat-value">12</span>
+                <span class="service-card-stat-label">Markets entered</span>
+              </div>
+            </div>
+            <div class="service-card-tags">
+              <span>Market entry</span>
+              <span>Pricing strategy</span>
+              <span>Roadmapping</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card service-card--split" data-service="operations">
+          <div class="service-card-bg"></div>
+          <div class="service-card-content">
+            <div class="service-card-top">
+              <span class="service-card-num">02</span>
+              <span class="service-card-label">Operations Design</span>
+            </div>
+            <h3 class="service-card-title">Growth doesn't break what already works.</h3>
+            <p class="service-card-desc">We redesign the workflows, handoffs, and metrics that quietly cap throughput — usually invisible until you try to scale past them.</p>
+            <ol class="service-card-steps">
+              <li><span>Map</span> current flows and pinpoint bottlenecks</li>
+              <li><span>Redesign</span> handoffs and decision gates</li>
+              <li><span>Set</span> metrics that measure real throughput</li>
+            </ol>
+            <div class="service-card-tags">
+              <span>Process design</span>
+              <span>Org design</span>
+              <span>SOPs</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card service-card--compact" data-service="tech">
+          <div class="service-card-bg"></div>
+          <div class="service-card-content">
+            <div class="service-card-top">
+              <span class="service-card-num">03</span>
+              <span class="service-card-label">Technology Enablement</span>
+            </div>
+            <h3 class="service-card-title">The right systems, sequenced right.</h3>
+            <p class="service-card-desc">Not a tech audit — a sequenced build plan for the systems that unblock your team, scoped against what you can actually maintain.</p>
+            <div class="service-card-inline-tags">
+              <span>Systems</span>
+              <span>Automation</span>
+              <span>Data</span>
+              <span>Integrations</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card service-card--wide" data-service="advisory">
+          <div class="service-card-bg"></div>
+          <div class="service-card-content">
+            <div class="service-card-top">
+              <span class="service-card-num">04</span>
+              <span class="service-card-label">Embedded Advisory</span>
+            </div>
+            <blockquote class="service-card-quote">
+              "A senior operator seated inside your leadership team for a full quarter or more."
+            </blockquote>
+            <div class="service-card-author">
+              <div class="service-card-avatar">
+                <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(200,160,80,.15)"/><circle cx="20" cy="15" r="5" fill="rgba(200,160,80,.4)"/><ellipse cx="20" cy="30" rx="10" ry="6" fill="rgba(200,160,80,.2)"/></svg>
+              </div>
+              <div>
+                <strong>Quarter+ engagement</strong>
+                <span>Fractional exec &bull; Board support</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. DIFFERENTIATORS — split + stat ribbon
+  ============================================================ -->
+  <section class="diff-section">
+    <div class="container diff-layout">
+      <div class="reveal" data-reveal="left">
+        <span class="eyebrow">Why Stackly</span>
+        <h2 class="section-title">Most firms hand you a plan. We stay for the hard part.</h2>
+        <div class="diff-list" style="margin-top:32px;">
+          <div class="diff-item">
+            <span class="diff-icon">①</span>
+            <div><h4>Senior staff only</h4><p>Every engagement is led by someone who has actually run the function before — never a fresh analyst.</p></div>
+          </div>
+          <div class="diff-item">
+            <span class="diff-icon">②</span>
+            <div><h4>Fixed-scope pricing</h4><p>You know the cost before we start. No hourly creep, no surprise add-ons mid-engagement.</p></div>
+          </div>
+          <div class="diff-item">
+            <span class="diff-icon">③</span>
+            <div><h4>Built-in accountability</h4><p>We define the success metric on day one and report against it — including when we miss.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat-ribbon reveal" data-reveal="right">
+        <div class="stat-ribbon-item"><span class="stat-ribbon-num" data-count="94" data-suffix="%">0%</span><span class="stat-ribbon-label">Engagements renewed or referred</span></div>
+        <div class="stat-ribbon-item"><span class="stat-ribbon-num" data-count="6" data-suffix="yrs">0yrs</span><span class="stat-ribbon-label">Average team experience</span></div>
+        <div class="stat-ribbon-item"><span class="stat-ribbon-num" data-count="48" data-suffix="hr">0hr</span><span class="stat-ribbon-label">Response time, guaranteed</span></div>
+        <div class="stat-ribbon-item"><span class="stat-ribbon-num" data-count="15" data-suffix="">0</span><span class="stat-ribbon-label">Sectors actively served</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. INDUSTRIES — marquee rail + images
+  ============================================================ -->
+  <section class="industries-section">
+    <div class="section-head" data-reveal="up">
+      <span class="eyebrow">Where We Work</span>
+      <h2 class="section-title">Depth across the sectors that need it most.</h2>
+    </div>
+    <div class="industry-rail">
+      <div class="industry-rail-track">
+
+        <div class="industry-card" data-industry="fintech">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">01</span>
+            <h4>Fintech &amp; Payments</h4>
+            <p>Compliance-aware growth strategy for regulated products.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="healthcare">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">02</span>
+            <h4>Healthcare Operators</h4>
+            <p>Operational redesign without disrupting patient care.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="retail">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">03</span>
+            <h4>D2C &amp; Retail</h4>
+            <p>Channel strategy and margin recovery at scale.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="industrial">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">04</span>
+            <h4>Industrial &amp; Manufacturing</h4>
+            <p>Supply chain resilience and throughput planning.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="saas">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">05</span>
+            <h4>B2B SaaS</h4>
+            <p>Go-to-market sequencing and retention economics.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="services">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">06</span>
+            <h4>Professional Services</h4>
+            <p>Utilization, pricing, and delivery model redesign.</p>
+          </div>
+        </div>
+
+        <!-- duplicate set for seamless marquee -->
+        <div class="industry-card" data-industry="fintech">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">01</span>
+            <h4>Fintech &amp; Payments</h4>
+            <p>Compliance-aware growth strategy for regulated products.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="healthcare">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">02</span>
+            <h4>Healthcare Operators</h4>
+            <p>Operational redesign without disrupting patient care.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="retail">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">03</span>
+            <h4>D2C &amp; Retail</h4>
+            <p>Channel strategy and margin recovery at scale.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="industrial">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">04</span>
+            <h4>Industrial &amp; Manufacturing</h4>
+            <p>Supply chain resilience and throughput planning.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="saas">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">05</span>
+            <h4>B2B SaaS</h4>
+            <p>Go-to-market sequencing and retention economics.</p>
+          </div>
+        </div>
+
+        <div class="industry-card" data-industry="services">
+          <div class="industry-card-bg"></div>
+          <div class="industry-card-content">
+            <span class="industry-card-num">06</span>
+            <h4>Professional Services</h4>
+            <p>Utilization, pricing, and delivery model redesign.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. RESULTS — tabbed comparison
+  ============================================================ -->
+  <section class="results-section">
+    <div class="section-head reveal" data-reveal="up">
+      <span class="eyebrow">Results</span>
+      <h2 class="section-title">A few engagements, briefly.</h2>
+    </div>
+    <div class="results-tabs">
+      <button class="results-tab is-active" data-target="fintech">Fintech</button>
+      <button class="results-tab" data-target="retail">Retail</button>
+      <button class="results-tab" data-target="saas">B2B SaaS</button>
+    </div>
+    <div class="results-panel-wrap">
+      <div class="results-panel is-active" data-panel="fintech">
+        <div class="results-figure reveal" data-reveal="left"></div>
+        <div class="results-text reveal" data-reveal="right">
+          <h3>Cut onboarding time from 11 days to 3.</h3>
+          <p>A payments platform was losing nearly a third of approved applicants before activation. We rebuilt the compliance handoff and the engineering queue around it.</p>
+          <div class="results-metrics">
+            <div class="results-metric"><strong>-73%</strong><span>Time to activation</span></div>
+            <div class="results-metric"><strong>+19%</strong><span>Approved-to-active rate</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="results-panel" data-panel="retail">
+        <div class="results-figure reveal" data-reveal="left"></div>
+        <div class="results-text reveal" data-reveal="right">
+          <h3>Recovered 6 points of gross margin in one quarter.</h3>
+          <p>A direct-to-consumer brand was discounting reflexively to hit revenue targets. We rebuilt the pricing and promotion calendar around contribution margin instead of top-line.</p>
+          <div class="results-metrics">
+            <div class="results-metric"><strong>+6pt</strong><span>Gross margin</span></div>
+            <div class="results-metric"><strong>-22%</strong><span>Discount frequency</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="results-panel" data-panel="saas">
+        <div class="results-figure reveal" data-reveal="left"></div>
+        <div class="results-text reveal" data-reveal="right">
+          <h3>Lifted net revenue retention from 91% to 104%.</h3>
+          <p>A mid-market SaaS company had a churn problem hiding behind a healthy logo count. We rebuilt the renewal motion and the early-warning signals behind it.</p>
+          <div class="results-metrics">
+            <div class="results-metric"><strong>+13pt</strong><span>Net revenue retention</span></div>
+            <div class="results-metric"><strong>-31%</strong><span>Logo churn</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. PROCESS — vertical connected path
+  ============================================================ -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-head reveal" data-reveal="up">
+        <span class="eyebrow">How We Work</span>
+        <h2 class="section-title">Four stages, no surprises.</h2>
+        <p class="section-sub">Every engagement follows the same disciplined sequence, regardless of scope.</p>
+      </div>
+      <div class="process-path">
+        <div class="process-node reveal" data-reveal="up" data-step="1">
+          <h4>Diagnose</h4>
+          <p>Two weeks inside your data and your team to find the real constraint — not the one in the org chart.</p>
+        </div>
+        <div class="process-node reveal" data-reveal="up" data-step="2">
+          <h4>Design</h4>
+          <p>A small set of viable paths forward, each pressure-tested against your actual constraints and culture.</p>
+        </div>
+        <div class="process-node reveal" data-reveal="up" data-step="3">
+          <h4>Deploy</h4>
+          <p>We build the plan into your existing workflow rather than handing over a binder to interpret alone.</p>
+        </div>
+        <div class="process-node reveal" data-reveal="up" data-step="4">
+          <h4>Prove</h4>
+          <p>We report against the metric we agreed on day one — and stay until it moves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. TESTIMONIAL — rotator
+  ============================================================ -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-wrap reveal" data-reveal="up">
+        <div class="testimonial-slide is-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">Stackly didn't just diagnose the problem — they stayed embedded until our renewal numbers actually moved.</p>
+          <div class="testimonial-person">
+            <span class="testimonial-avatar">RH</span>
+            <div><h5>Renee Hartley</h5><span>COO, Northwind Analytics</span></div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">The pricing engagement paid for itself within six weeks. That's never happened with a consulting firm before.</p>
+          <div class="testimonial-person">
+            <span class="testimonial-avatar">DM</span>
+            <div><h5>David Mensah</h5><span>Founder, Comet Labs</span></div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">They told us the truth about our org chart in week one. Uncomfortable, and exactly what we needed.</p>
+          <div class="testimonial-person">
+            <span class="testimonial-avatar">SK</span>
+            <div><h5>Sana Khalid</h5><span>VP Ops, Veridian Health</span></div>
+          </div>
+        </div>
+        <div class="testimonial-dots">
+          <button class="testimonial-dot is-active" aria-label="Testimonial 1"></button>
+          <button class="testimonial-dot" aria-label="Testimonial 2"></button>
+          <button class="testimonial-dot" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. CTA — gradient mesh
+  ============================================================ -->
+  <section class="cta-section reveal" data-reveal="scale">
+    <div class="cta-mesh"></div>
+    <div class="cta-content">
+      <h2>Let's find the constraint that's actually capping you.</h2>
+      <p>Thirty minutes, no deck, no pitch — just a direct conversation about where you're stuck.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Book a strategy call</a>
+        <a href="service.html" class="btn btn-ghost-light">View all services</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-wave"></div>
+  <div class="footer-inner">
+    <div class="footer-col footer-col--brand">
+      <a href="index.html" class="footer-logo-link" aria-label="Stackly Business — Home">
+        <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo" class="footer-logo">
+      </a>
+      <p class="footer-tagline">Strategy, operations, and technology consulting for growing companies — measured by outcomes, not hours.</p>
+      <div class="footer-social">
+        <a href="404.html" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="404.html" class="footer-social-link" aria-label="X / Twitter" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="404.html" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <h5>Company</h5>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="404.html" class="footer-link">Team</a>
+      <a href="404.html" class="footer-link">Careers</a>
+      <a href="404.html" class="footer-link">Contact</a>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <h5>Services</h5>
+      <a href="404.html" class="footer-link">Growth Strategy</a>
+      <a href="404.html" class="footer-link">Operations Excellence</a>
+      <a href="404.html" class="footer-link">Technology Enablement</a>
+      <a href="404.html" class="footer-link">Embedded Advisory</a>
+    </div>
+
+    <div class="footer-col footer-col--contact">
+      <h5>Connect</h5>
+      <span class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Chennai, Tamil Nadu, India
+      </span>
+      <a href="404.html" class="footer-contact-item footer-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        hello@stacklybusiness.com
+      </a>
+      <a href="404.html" class="footer-contact-item footer-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 98765 43210
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Stackly Business. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="404.html" class="footer-bottom-link">Privacy</a>
+      <a href="404.html" class="footer-bottom-link">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#0a1a1e"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <g opacity=".15" stroke="#6BC8B4" fill="none">
+    <circle cx="300" cy="250" r="160" stroke-width=".6"/>
+    <circle cx="300" cy="250" r="120" stroke-width=".4"/>
+    <circle cx="300" cy="250" r="80" stroke-width=".6"/>
+    <circle cx="300" cy="250" r="40" stroke-width=".4"/>
+  </g>
+  <g opacity=".2">
+    <circle cx="300" cy="250" r="4" fill="#6BC8B4"/>
+    <circle cx="140" cy="250" r="3" fill="#6BC8B4" opacity=".6"/>
+    <circle cx="460" cy="250" r="3" fill="#6BC8B4" opacity=".6"/>
+    <circle cx="300" cy="90" r="3" fill="#6BC8B4" opacity=".5"/>
+    <circle cx="300" cy="410" r="3" fill="#6BC8B4" opacity=".5"/>
+  </g>
+  <g opacity=".12">
+    <path d="M230 180 Q300 130 370 180" stroke="#6BC8B4" stroke-width="1" fill="none"/>
+    <path d="M230 320 Q300 370 370 320" stroke="#6BC8B4" stroke-width="1" fill="none"/>
+    <path d="M180 230 Q130 300 180 370" stroke="#6BC8B4" stroke-width="1" fill="none"/>
+    <path d="M420 230 Q470 300 420 370" stroke="#6BC8B4" stroke-width="1" fill="none"/>
+  </g>
+</svg>

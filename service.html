@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Stackly Business</title>
+<meta name="description" content="Four ways we get involved — from a single sharp recommendation to an embedded team.">
+<link rel="icon" href="assets/images/logo-stackly.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/service.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body data-page="service">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Stackly Business — Home">
+      <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="service.html" class="nav-link" data-nav="service">Services</a></li>
+        <li><a href="blog.html" class="nav-link" data-nav="blog">Blog</a></li>
+        <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  <ul class="mobile-nav-list">
+    <li style="--i:0"><a href="index.html" class="mobile-nav-link" data-nav="home">Home</a></li>
+    <li style="--i:1"><a href="about.html" class="mobile-nav-link" data-nav="about">About</a></li>
+    <li style="--i:2"><a href="service.html" class="mobile-nav-link" data-nav="service">Services</a></li>
+    <li style="--i:3"><a href="blog.html" class="mobile-nav-link" data-nav="blog">Blog</a></li>
+    <li style="--i:4"><a href="contact.html" class="mobile-nav-link" data-nav="contact">Contact</a></li>
+  </ul>
+  <div class="mobile-actions" style="--i:5">
+    <a href="login.html" class="btn btn-outline btn-block">Log in</a>
+    <a href="signup.html" class="btn btn-primary btn-block">Get Started</a>
+  </div>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main id="main">
+
+  <!-- ============================================================
+       1. HERO — single-column centered with 4 pillar cards
+  ============================================================ -->
+  <section class="svc-hero">
+    <div class="svc-hero-bg">
+      <div class="svc-hero-grid"></div>
+      <div class="svc-hero-glow"></div>
+    </div>
+    <div class="svc-hero-inner">
+      <div class="svc-hero-content">
+        <span class="svc-hero-badge">Four distinct ways to engage</span>
+        <h1 class="svc-hero-title">Expertise, deployed <span class="gold">your</span> way.</h1>
+        <p class="svc-hero-sub">Strategy. Operations. Technology. Embedded leadership. Pick one — or combine them. Every engagement is scoped to a measurable outcome, not a calendar.</p>
+        <div class="svc-hero-cta">
+          <a href="#strategy" class="btn btn-primary">Explore services <span>↓</span></a>
+          <a href="contact.html" class="btn btn-outline">Book a call</a>
+        </div>
+      </div>
+
+      <div class="svc-pillars">
+        <a href="#strategy" class="svc-pillar" data-pillar="strategy">
+          <span class="svc-pillar-num">01</span>
+          <span class="svc-pillar-label">Strategy</span>
+          <span class="svc-pillar-tag">Market growth</span>
+        </a>
+        <a href="#operations" class="svc-pillar" data-pillar="operations">
+          <span class="svc-pillar-num">02</span>
+          <span class="svc-pillar-label">Operations</span>
+          <span class="svc-pillar-tag">Process design</span>
+        </a>
+        <a href="#tech" class="svc-pillar" data-pillar="tech">
+          <span class="svc-pillar-num">03</span>
+          <span class="svc-pillar-label">Technology</span>
+          <span class="svc-pillar-tag">Systems & data</span>
+        </a>
+        <a href="#advisory" class="svc-pillar" data-pillar="advisory">
+          <span class="svc-pillar-num">04</span>
+          <span class="svc-pillar-label">Advisory</span>
+          <span class="svc-pillar-tag">Embedded exec</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. STRATEGY — split with stat + process mini-timeline
+  ============================================================ -->
+  <section class="svc-section svc-strategy" id="strategy">
+    <div class="container">
+      <div class="svc-split">
+        <div class="svc-split-content">
+          <span class="eyebrow">01 &mdash; Growth Strategy</span>
+          <h2>We map your market so you own the move.</h2>
+          <p>We map your market, pressure-test three growth paths, and leave you with one decision to make — not a 60-page deck to interpret. Every recommendation is grounded in data and designed for your actual capacity.</p>
+
+          <div class="svc-deliverables">
+            <span class="svc-deliverables-label">What you get</span>
+            <div class="svc-deliverables-grid">
+              <div class="svc-deliverable">
+                <span class="svc-deliverable-icon">
+                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C8A96B" stroke-width="1.5"/><path d="M6 10 L9 13 L14 7" stroke="#C8A96B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span>Competitive landscape</span>
+              </div>
+              <div class="svc-deliverable">
+                <span class="svc-deliverable-icon">
+                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C8A96B" stroke-width="1.5"/><path d="M6 10 L9 13 L14 7" stroke="#C8A96B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span>Three growth paths</span>
+              </div>
+              <div class="svc-deliverable">
+                <span class="svc-deliverable-icon">
+                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C8A96B" stroke-width="1.5"/><path d="M6 10 L9 13 L14 7" stroke="#C8A96B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span>Financial model</span>
+              </div>
+              <div class="svc-deliverable">
+                <span class="svc-deliverable-icon">
+                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C8A96B" stroke-width="1.5"/><path d="M6 10 L9 13 L14 7" stroke="#C8A96B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span>Execution roadmap</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc-split-stats">
+            <div class="svc-split-stat">
+              <span class="svc-split-stat-value"><span data-count="87" data-suffix="%">0%</span></span>
+              <span class="svc-split-stat-label">Accuracy on market predictions</span>
+            </div>
+            <div class="svc-split-stat">
+              <span class="svc-split-stat-value"><span data-count="3" data-suffix="×">0×</span></span>
+              <span class="svc-split-stat-label">Avg. growth multiplier</span>
+            </div>
+            <div class="svc-split-stat">
+              <span class="svc-split-stat-value"><span data-count="6" data-suffix=" wks">0</span></span>
+              <span class="svc-split-stat-label">Typical engagement</span>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split-visual">
+          <div class="svc-timeline">
+            <div class="svc-timeline-node">
+              <span class="svc-timeline-step">Step 1</span>
+              <h4>Market scan</h4>
+              <p>We analyze your category, competitors, and whitespace to identify where you have permission to win.</p>
+              <span class="svc-timeline-duration">Weeks 1&ndash;2</span>
+            </div>
+            <div class="svc-timeline-node">
+              <span class="svc-timeline-step">Step 2</span>
+              <h4>Path selection</h4>
+              <p>Three viable growth paths, pressure-tested against data and your team's capacity to execute.</p>
+              <span class="svc-timeline-duration">Weeks 3&ndash;4</span>
+            </div>
+            <div class="svc-timeline-node">
+              <span class="svc-timeline-step">Step 3</span>
+              <h4>Execution roadmap</h4>
+              <p>A sequenced plan with clear owners, milestones, and checkpoints — designed to be acted on immediately.</p>
+              <span class="svc-timeline-duration">Weeks 5&ndash;6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. OPERATIONS — before/after comparison
+  ============================================================ -->
+  <section class="svc-section svc-operations" id="operations">
+    <div class="container">
+      <div class="svc-section-head">
+        <span class="eyebrow">02 &mdash; Operations Design</span>
+        <h2>Growth shouldn't break what already works.</h2>
+        <p>We redesign the workflows, handoffs, and metrics that quietly cap throughput — usually invisible until you try to scale past them.</p>
+      </div>
+
+      <div class="svc-compare">
+        <div class="svc-compare-col svc-compare--before">
+          <span class="svc-compare-label">Before</span>
+          <ul class="svc-compare-list">
+            <li>Decisions bottleneck at one person</li>
+            <li>Handoffs create 2&ndash;3 day delays</li>
+            <li>No single source of truth on status</li>
+            <li>Team grows but throughput flatlines</li>
+          </ul>
+        </div>
+        <div class="svc-compare-divider">
+          <span class="svc-compare-arrow">→</span>
+        </div>
+        <div class="svc-compare-col svc-compare--after">
+          <span class="svc-compare-label">After</span>
+          <ul class="svc-compare-list">
+            <li>Clear decision gates with delegated authority</li>
+            <li>Handoffs measured in hours, not days</li>
+            <li>Live dashboard replaces status meetings</li>
+            <li>Throughput scales linearly with headcount</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="svc-method">
+        <div class="svc-method-head">
+          <span class="svc-method-label">Our approach</span>
+          <h3>A three-phase process that fits your cadence.</h3>
+        </div>
+        <div class="svc-method-grid">
+          <div class="svc-method-card">
+            <span class="svc-method-card-num">01</span>
+            <strong>Discovery</strong>
+            <p>We shadow your team, map every handoff, and measure true cycle times — not what the dashboard says.</p>
+          </div>
+          <div class="svc-method-card">
+            <span class="svc-method-card-num">02</span>
+            <strong>Redesign</strong>
+            <p>We rebuild the process layer with your team, testing each change against real throughput data.</p>
+          </div>
+          <div class="svc-method-card">
+            <span class="svc-method-card-num">03</span>
+            <strong>Sustain</strong>
+            <p>We install the dashboards, cadences, and decision rules that keep the new system running.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-result-row">
+        <span class="svc-result-stat"><strong data-count="94" data-suffix="%">0%</strong> throughput improvement</span>
+        <span class="svc-result-stat"><strong data-count="60" data-suffix="%">0%</strong> reduction in decision time</span>
+        <span class="svc-result-stat">Avg. engagement: <strong>8 weeks</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. TECHNOLOGY — capability grid + pull quote
+  ============================================================ -->
+  <section class="svc-section svc-technology" id="tech">
+    <div class="container">
+      <div class="svc-split svc-split--reverse">
+        <div class="svc-split-visual">
+          <div class="svc-grid-showcase">
+            <div class="svc-grid-item">
+              <span class="svc-grid-icon">
+                <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="3" stroke="#8C82DC" stroke-width="1.5"/><line x1="12" y1="29" x2="20" y2="29" stroke="#8C82DC" stroke-width="1.5"/><line x1="16" y1="26" x2="16" y2="29" stroke="#8C82DC" stroke-width="1.5"/></svg>
+              </span>
+              <strong>Systems audit</strong>
+              <span>Find what's redundant or missing</span>
+            </div>
+            <div class="svc-grid-item">
+              <span class="svc-grid-icon">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M6 26 L26 6" stroke="#8C82DC" stroke-width="1.5"/><path d="M10 10 L14 6" stroke="#8C82DC" stroke-width="1.5"/><path d="M22 22 L26 18" stroke="#8C82DC" stroke-width="1.5"/></svg>
+              </span>
+              <strong>Automation</strong>
+              <span>Eliminate manual busywork</span>
+            </div>
+            <div class="svc-grid-item">
+              <span class="svc-grid-icon">
+                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="#8C82DC" stroke-width="1.5"/><circle cx="16" cy="16" r="4" fill="#8C82DC" opacity=".4"/></svg>
+              </span>
+              <strong>Data pipeline</strong>
+              <span>One source of truth for decisions</span>
+            </div>
+            <div class="svc-grid-item">
+              <span class="svc-grid-icon">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M6 22 Q10 12 16 16 Q22 20 26 10" stroke="#8C82DC" stroke-width="1.5" fill="none"/></svg>
+              </span>
+              <strong>Integration</strong>
+              <span>Tools that actually talk to each other</span>
+            </div>
+            <div class="svc-grid-item">
+              <span class="svc-grid-icon">
+                <svg viewBox="0 0 32 32" fill="none"><rect x="6" y="8" width="20" height="16" rx="3" stroke="#8C82DC" stroke-width="1.5"/><path d="M10 22 L14 14 L18 18 L22 10" stroke="#8C82DC" stroke-width="1.5" fill="none"/></svg>
+              </span>
+              <strong>Analytics</strong>
+              <span>Dashboards that drive decisions</span>
+            </div>
+            <div class="svc-grid-item">
+              <span class="svc-grid-icon">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M8 24 L16 10 L24 24" stroke="#8C82DC" stroke-width="1.5" fill="none"/><circle cx="16" cy="8" r="2" fill="#8C82DC" opacity=".5"/></svg>
+              </span>
+              <strong>Cloud ops</strong>
+              <span>Scalable infrastructure setup</span>
+            </div>
+          </div>
+          <div class="svc-tech-stats">
+            <div class="svc-tech-stat">
+              <strong><span data-count="40" data-suffix="%">0%</span></strong>
+              <span>Faster tool adoption</span>
+            </div>
+            <div class="svc-tech-stat">
+              <strong><span data-count="60" data-suffix="%">0%</span></strong>
+              <span>Reduction in manual work</span>
+            </div>
+            <div class="svc-tech-stat">
+              <strong><span data-count="3" data-suffix="×">0×</span></strong>
+              <span>ROI on tech investment</span>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split-content">
+          <span class="eyebrow">03 &mdash; Technology Enablement</span>
+          <h2>The right systems, sequenced right.</h2>
+          <p>Not a tech audit — a sequenced build plan for the systems that unblock your team, scoped against what you can actually maintain. We prioritize by business impact, not tech debt.</p>
+          <blockquote class="svc-pullquote">
+            "They didn't sell us more software. They helped us use what we had better — then identified the one gap worth filling."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. ADVISORY — case study + metrics
+  ============================================================ -->
+  <section class="svc-section svc-advisory" id="advisory">
+    <div class="container">
+      <div class="svc-section-head">
+        <span class="eyebrow">04 &mdash; Embedded Advisory</span>
+        <h2>A senior operator in the room, every week.</h2>
+        <p>For teams mid-transformation who need a steady senior voice in the room every week — not a quarterly check-in from a partner you barely know.</p>
+      </div>
+
+      <div class="svc-case">
+        <div class="svc-case-card">
+          <div class="svc-case-top">
+            <span class="svc-case-tag">Case study</span>
+            <span class="svc-case-company">Mid-market SaaS</span>
+          </div>
+          <h3>From board observer to operating partner in 90 days.</h3>
+          <p>The CEO needed a trusted operator to lead the weekly ops review, coach the leadership team, and keep the transformation on track. We embedded a principal for two quarters — the team kept the rhythm after we left.</p>
+          <div class="svc-case-metrics">
+            <div class="svc-case-metric">
+              <strong class="svc-case-metric-value"><span data-count="40" data-suffix="%">0%</span></strong>
+              <span class="svc-case-metric-label">Faster decision velocity</span>
+            </div>
+            <div class="svc-case-metric">
+              <strong class="svc-case-metric-value"><span data-count="2" data-suffix="×">0×</span></strong>
+              <span class="svc-case-metric-label">Team throughput</span>
+            </div>
+            <div class="svc-case-metric">
+              <strong class="svc-case-metric-value"><span data-count="100" data-suffix="%">0%</span></strong>
+              <span class="svc-case-metric-label">Leadership retention</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-scenarios">
+        <span class="svc-scenarios-label">This fits if you're...</span>
+        <div class="svc-scenarios-grid">
+          <div class="svc-scenario">
+            <span class="svc-scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#E8A87C" stroke-width="1.5"/><path d="M8 14 Q12 10 16 14" stroke="#E8A87C" stroke-width="1.5" fill="none"/></svg>
+            </span>
+            <span>Navigating a leadership transition</span>
+          </div>
+          <div class="svc-scenario">
+            <span class="svc-scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20 L20 4" stroke="#E8A87C" stroke-width="1.5"/><path d="M12 4 L20 4 L20 12" stroke="#E8A87C" stroke-width="1.5" fill="none"/></svg>
+            </span>
+            <span>Scaling past 50 people for the first time</span>
+          </div>
+          <div class="svc-scenario">
+            <span class="svc-scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#E8A87C" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="#E8A87C" opacity=".4"/></svg>
+            </span>
+            <span>Integrating an acquisition without losing momentum</span>
+          </div>
+          <div class="svc-scenario">
+            <span class="svc-scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4 L12 20" stroke="#E8A87C" stroke-width="1.5"/><path d="M4 12 L20 12" stroke="#E8A87C" stroke-width="1.5"/></svg>
+            </span>
+            <span>New to external advisory and want a low-risk start</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="svc-section svc-process">
+    <div class="container">
+      <div class="svc-section-head">
+        <span class="eyebrow">How It Works</span>
+        <h2>From first conversation to measurable outcome.</h2>
+        <p>Every engagement follows the same proven arc — scoped tight, executed fast, and built to outlast us.</p>
+      </div>
+
+      <div class="svc-steps">
+        <div class="svc-step">
+          <span class="svc-step-num">01</span>
+          <div class="svc-step-body">
+            <h4>Discovery sprint <span class="svc-step-dur">1&ndash;2 wks</span></h4>
+            <p>We spend time inside your business — interviewing your team, reviewing data, identifying the real constraint.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <span class="svc-step-num">02</span>
+          <div class="svc-step-body">
+            <h4>Scope &amp; commit <span class="svc-step-dur">1 wk</span></h4>
+            <p>We present our findings and a fixed-price proposal for the engagement — scoped to a specific outcome, not a timeline.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <span class="svc-step-num">03</span>
+          <div class="svc-step-body">
+            <h4>Execute &amp; adjust <span class="svc-step-dur">4&ndash;12 wks</span></h4>
+            <p>We work alongside your team in weekly cycles. Every Monday we recommit to the week's priorities based on what we learned.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <span class="svc-step-num">04</span>
+          <div class="svc-step-body">
+            <h4>Handoff &amp; sustain <span class="svc-step-dur">ongoing</span></h4>
+            <p>We leave you with the playbook, the metrics, and the confidence to run it yourself. We're a text away if you need us.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. CTA
+  ============================================================ -->
+  <section class="svc-section svc-cta">
+    <div class="container">
+      <div class="svc-cta-card">
+        <div class="svc-cta-bg"></div>
+        <div class="svc-cta-content">
+          <span class="eyebrow">Ready to start?</span>
+          <h2>Not sure which engagement fits?</h2>
+          <p>We'll help you figure it out in a 30-minute conversation — no pitch, no pressure.</p>
+          <div class="svc-cta-buttons">
+            <a href="contact.html" class="btn btn-primary">Book a strategy call <span>→</span></a>
+            <a href="index.html" class="btn btn-outline">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-wave"></div>
+  <div class="footer-inner">
+    <div class="footer-col footer-col--brand">
+      <a href="index.html" class="footer-logo-link" aria-label="Stackly Business — Home">
+        <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo" class="footer-logo">
+      </a>
+      <p class="footer-tagline">Strategy, operations, and technology consulting for growing companies — measured by outcomes, not hours.</p>
+      <div class="footer-social">
+        <a href="404.html" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="404.html" class="footer-social-link" aria-label="X / Twitter" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="404.html" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <h5>Company</h5>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="404.html" class="footer-link">Team</a>
+      <a href="404.html" class="footer-link">Careers</a>
+      <a href="404.html" class="footer-link">Contact</a>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <h5>Services</h5>
+      <a href="404.html" class="footer-link">Growth Strategy</a>
+      <a href="404.html" class="footer-link">Operations Excellence</a>
+      <a href="404.html" class="footer-link">Technology Enablement</a>
+      <a href="404.html" class="footer-link">Embedded Advisory</a>
+    </div>
+
+    <div class="footer-col footer-col--contact">
+      <h5>Connect</h5>
+      <span class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Chennai, Tamil Nadu, India
+      </span>
+      <a href="404.html" class="footer-contact-item footer-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        hello@stacklybusiness.com
+      </a>
+      <a href="404.html" class="footer-contact-item footer-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 98765 43210
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Stackly Business. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="404.html" class="footer-bottom-link">Privacy</a>
+      <a href="404.html" class="footer-bottom-link">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/service.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1a140e"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <g opacity=".08" fill="#C8A050">
+    <circle cx="120" cy="100" r="2"/><circle cx="180" cy="100" r="2"/><circle cx="240" cy="100" r="2"/>
+    <circle cx="300" cy="100" r="2"/><circle cx="360" cy="100" r="2"/><circle cx="420" cy="100" r="2"/>
+    <circle cx="480" cy="100" r="2"/>
+    <circle cx="90" cy="140" r="2"/><circle cx="150" cy="140" r="2"/><circle cx="210" cy="140" r="2"/>
+    <circle cx="270" cy="140" r="2"/><circle cx="330" cy="140" r="2"/><circle cx="390" cy="140" r="2"/>
+    <circle cx="450" cy="140" r="2"/><circle cx="510" cy="140" r="2"/>
+    <circle cx="120" cy="180" r="2"/><circle cx="180" cy="180" r="2"/><circle cx="240" cy="180" r="2"/>
+    <circle cx="300" cy="180" r="2"/><circle cx="360" cy="180" r="2"/><circle cx="420" cy="180" r="2"/>
+    <circle cx="480" cy="180" r="2"/>
+    <circle cx="90" cy="220" r="2"/><circle cx="150" cy="220" r="2"/><circle cx="210" cy="220" r="2"/>
+    <circle cx="270" cy="220" r="2"/><circle cx="330" cy="220" r="2"/><circle cx="390" cy="220" r="2"/>
+    <circle cx="450" cy="220" r="2"/><circle cx="510" cy="220" r="2"/>
+    <circle cx="120" cy="260" r="2"/><circle cx="180" cy="260" r="2"/><circle cx="240" cy="260" r="2"/>
+    <circle cx="300" cy="260" r="2"/><circle cx="360" cy="260" r="2"/><circle cx="420" cy="260" r="2"/>
+    <circle cx="480" cy="260" r="2"/>
+  </g>
+  <g opacity=".22">
+    <circle cx="300" cy="300" r="100" fill="none" stroke="#C8A050" stroke-width=".6"/>
+    <circle cx="300" cy="300" r="60" fill="none" stroke="#C8A050" stroke-width=".5"/>
+    <path d="M260 290 Q280 270 300 290 Q320 310 340 290" stroke="#C8A050" stroke-width="1" fill="none"/>
+    <path d="M285 305 Q300 320 315 305" stroke="#C8A050" stroke-width=".8" fill="none"/>
+  </g>
+</svg>
