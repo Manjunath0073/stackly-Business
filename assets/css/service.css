@@ -131,7 +131,26 @@
 /* ===================================================================
    2. STRATEGY — split with stat + timeline
 =================================================================== */
-.svc-section{ padding:110px var(--gutter); }
+.svc-section{
+  position:relative;
+  padding:110px var(--gutter);
+}
+.svc-section-bg{
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  z-index:0;
+}
+.svc-section-bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(245,245,240,.95) 30%, rgba(245,245,240,.7) 60%, rgba(245,245,240,.4));
+}
+.svc-operations .svc-section-bg::after{
+  background:linear-gradient(90deg, rgba(2,6,23,.94) 30%, rgba(2,6,23,.7) 60%, rgba(2,6,23,.4));
+}
+.svc-advisory .svc-section-bg::after{
+  background:linear-gradient(90deg, rgba(2,6,23,.94) 25%, rgba(26,20,14,.7) 55%, rgba(26,20,14,.35));
+}
+.svc-section .container{ position:relative; z-index:1; }
 .svc-strategy{ background:var(--mist); }
 .svc-split{
   max-width:var(--container); margin:0 auto;

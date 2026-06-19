@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Stackly Business</title>
+<meta name="description" content="Client dashboard — Stackly Business">
+<link rel="icon" href="assets/images/logo-stackly.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body data-page="dashboard" data-role="client">
+
+<div class="d-wrap">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="d-sidebar">
+    <div class="d-sidebar-inner">
+      <a href="index.html" class="d-logo">
+        <img src="assets/images/logo-stackly.webp" alt="Stackly Business">
+      </a>
+
+      <div class="d-user">
+        <div class="d-user-avatar"></div>
+        <div class="d-user-info">
+          <div class="d-user-name"></div>
+          <div class="d-user-role"></div>
+        </div>
+      </div>
+
+      <nav class="d-nav">
+        <button class="d-nav-btn is-active" data-panel="panel-overview">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="7" height="7" rx="1"/><rect x="11" y="2" width="7" height="3" rx="1"/><rect x="11" y="7" width="7" height="11" rx="1"/><rect x="2" y="11" width="7" height="7" rx="1"/></svg>
+          Overview
+        </button>
+        <button class="d-nav-btn" data-panel="panel-engagements">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10h4l2 6 4-12 2 6h4"/></svg>
+          Engagements
+        </button>
+        <button class="d-nav-btn" data-panel="panel-reports">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h12v14H4z"/><path d="M8 8h4M8 12h4"/></svg>
+          Reports
+        </button>
+        <button class="d-nav-btn" data-panel="panel-billing">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M7 10h6"/></svg>
+          Billing
+        </button>
+      </nav>
+
+      <button class="d-logout">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4M13 6l4 4-4 4M7 10h10"/></svg>
+        Log out
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="d-main">
+
+    <header class="d-topbar">
+      <h2 id="panel-title">Overview</h2>
+      <div class="d-topbar-right">
+        <span class="d-topbar-date"></span>
+      </div>
+    </header>
+
+    <div class="d-body">
+
+      <!-- ---- PANEL: Overview ---- -->
+      <div class="d-panel is-active" id="panel-overview">
+        <div class="d-stats">
+          <div class="d-stat">
+            <span class="d-stat-label">Active Engagements</span>
+            <span class="d-stat-num">3</span>
+            <span class="d-stat-change is-up">+1 this quarter</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Completed</span>
+            <span class="d-stat-num">7</span>
+            <span class="d-stat-change is-up">+2 this year</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Total Spent</span>
+            <span class="d-stat-num">$184K</span>
+            <span class="d-stat-change is-up">On budget</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Avg. NPS</span>
+            <span class="d-stat-num">92</span>
+            <span class="d-stat-change is-up">+4 pts</span>
+          </div>
+        </div>
+
+        <div class="d-chart-row">
+          <div class="d-chart-card">
+            <h3>Engagement Progress</h3>
+            <div style="height:240px"><canvas id="chart-line"></canvas></div>
+          </div>
+          <div class="d-chart-card">
+            <h3>Service Breakdown</h3>
+            <div style="height:240px"><canvas id="chart-doughnut"></canvas></div>
+          </div>
+        </div>
+
+        <div class="d-table">
+          <div class="d-table-head" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Engagement</span><span>Lead</span><span>Status</span><span>Value</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Growth Strategy — Q3</span><span>Arun K.</span><span><span class="d-badge d-badge--active">Active</span></span><span>$72K</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Operations Redesign</span><span>Sonia N.</span><span><span class="d-badge d-badge--active">Active</span></span><span>$48K</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Technology Audit</span><span>Ravi V.</span><span><span class="d-badge d-badge--pending">Review</span></span><span>$36K</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Pricing Optimisation</span><span>Priya M.</span><span><span class="d-badge d-badge--completed">Completed</span></span><span>$28K</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PANEL: Engagements ---- -->
+      <div class="d-panel" id="panel-engagements">
+        <div class="d-chart-row">
+          <div class="d-chart-card">
+            <h3>Timeline (Monthly Milestones)</h3>
+            <div style="height:240px"><canvas id="chart-bar"></canvas></div>
+          </div>
+          <div class="d-chart-card">
+            <h3>Engagement Health</h3>
+            <div style="height:240px"><canvas id="chart-doughnut-engage"></canvas></div>
+          </div>
+        </div>
+        <div class="d-table">
+          <div class="d-table-head" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span>Name</span><span>Started</span><span>Next Milestone</span><span>Status</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span>Growth Strategy</span><span>Mar 2026</span><span>Jul 15 — Market analysis</span><span><span class="d-badge d-badge--active">On track</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span>Operations Redesign</span><span>Jan 2026</span><span>Jul 22 — Process map</span><span><span class="d-badge d-badge--active">On track</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span>Technology Audit</span><span>May 2026</span><span>Aug 01 — Report due</span><span><span class="d-badge d-badge--pending">In review</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span>Pricing Optimisation</span><span>Nov 2025</span><span>—</span><span><span class="d-badge d-badge--completed">Done</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PANEL: Reports ---- -->
+      <div class="d-panel" id="panel-reports">
+        <div class="d-table">
+          <div class="d-table-head" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Report</span><span>Type</span><span>Date</span><span>Download</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Q2 Engagement Summary</span><span>Quarterly</span><span>Jun 30, 2026</span><span><a href="404.html" style="color:var(--gold);font-weight:600;font-size:.82rem">Download PDF</a></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Operations Benchmark</span><span>Analysis</span><span>May 22, 2026</span><span><a href="404.html" style="color:var(--gold);font-weight:600;font-size:.82rem">Download PDF</a></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Technology Roadmap</span><span>Strategy</span><span>Apr 10, 2026</span><span><a href="404.html" style="color:var(--gold);font-weight:600;font-size:.82rem">Download PDF</a></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+            <span>Pricing Audit Findings</span><span>Audit</span><span>Feb 14, 2026</span><span><a href="404.html" style="color:var(--gold);font-weight:600;font-size:.82rem">Download PDF</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PANEL: Billing ---- -->
+      <div class="d-panel" id="panel-billing">
+        <div class="d-table">
+          <div class="d-table-head" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
+            <span>Invoice</span><span>Amount</span><span>Status</span><span>Date</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
+            <span>INV-2026-042</span><span>$24,000</span><span><span class="d-badge d-badge--active">Paid</span></span><span>Jun 01, 2026</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
+            <span>INV-2026-038</span><span>$24,000</span><span><span class="d-badge d-badge--active">Paid</span></span><span>May 01, 2026</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
+            <span>INV-2026-034</span><span>$24,000</span><span><span class="d-badge d-badge--pending">Pending</span></span><span>Apr 01, 2026</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
+            <span>INV-2026-029</span><span>$24,000</span><span><span class="d-badge d-badge--active">Paid</span></span><span>Mar 01, 2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

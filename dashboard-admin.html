@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Stackly Business</title>
+<meta name="description" content="Admin dashboard — Stackly Business">
+<link rel="icon" href="assets/images/logo-stackly.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body data-page="dashboard" data-role="admin">
+
+<div class="d-wrap">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="d-sidebar">
+    <div class="d-sidebar-inner">
+      <a href="index.html" class="d-logo">
+        <img src="assets/images/logo-stackly.webp" alt="Stackly Business">
+      </a>
+
+      <div class="d-user">
+        <div class="d-user-avatar"></div>
+        <div class="d-user-info">
+          <div class="d-user-name"></div>
+          <div class="d-user-role"></div>
+        </div>
+      </div>
+
+      <nav class="d-nav">
+        <button class="d-nav-btn is-active" data-panel="panel-overview">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="7" height="7" rx="1"/><rect x="11" y="2" width="7" height="3" rx="1"/><rect x="11" y="7" width="7" height="11" rx="1"/><rect x="2" y="11" width="7" height="7" rx="1"/></svg>
+          Overview
+        </button>
+        <button class="d-nav-btn" data-panel="panel-team">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path d="M2 18c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+          Team
+        </button>
+        <button class="d-nav-btn" data-panel="panel-pipeline">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10h4l2 6 4-12 2 6h4"/></svg>
+          Pipeline
+        </button>
+        <button class="d-nav-btn" data-panel="panel-settings">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="2.5"/><path d="M10 1.5v2M10 16.5v2M18.5 10h-2M3.5 10h-2M15.95 4.05l-1.41 1.41M5.46 14.54l-1.41 1.41M15.95 15.95l-1.41-1.41M5.46 5.46 4.05 4.05"/></svg>
+          Settings
+        </button>
+      </nav>
+
+      <button class="d-logout">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4M13 6l4 4-4 4M7 10h10"/></svg>
+        Log out
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="d-main">
+
+    <header class="d-topbar">
+      <h2 id="panel-title">Overview</h2>
+      <div class="d-topbar-right">
+        <span class="d-topbar-date"></span>
+      </div>
+    </header>
+
+    <div class="d-body">
+
+      <!-- ---- PANEL: Overview ---- -->
+      <div class="d-panel is-active" id="panel-overview">
+        <div class="d-stats">
+          <div class="d-stat">
+            <span class="d-stat-label">Total Clients</span>
+            <span class="d-stat-num">34</span>
+            <span class="d-stat-change is-up">+4 this quarter</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Active Engagements</span>
+            <span class="d-stat-num">18</span>
+            <span class="d-stat-change is-up">92% util.</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Revenue (YTD)</span>
+            <span class="d-stat-num">$1.8M</span>
+            <span class="d-stat-change is-up">+22% YoY</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Avg. Engagement</span>
+            <span class="d-stat-num">$52K</span>
+            <span class="d-stat-change is-up">+8% YoY</span>
+          </div>
+        </div>
+
+        <div class="d-chart-row">
+          <div class="d-chart-card">
+            <h3>Quarterly Revenue</h3>
+            <div style="height:240px"><canvas id="chart-bar"></canvas></div>
+          </div>
+          <div class="d-chart-card">
+            <h3>Team Utilisation</h3>
+            <div style="height:240px">
+              <canvas id="chart-util"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div class="d-chart-card">
+            <h3>Active vs Pipeline</h3>
+            <div style="height:200px">
+              <canvas id="chart-pipeline"></canvas>
+            </div>
+          </div>
+          <div class="d-chart-card" style="display:flex;flex-direction:column;justify-content:center">
+            <h3>Quick Actions</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
+              <a href="404.html" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:var(--mist);font-size:.85rem;font-weight:600;color:var(--ink);transition:background .2s">➕  Onboard new client</a>
+              <a href="404.html" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:var(--mist);font-size:.85rem;font-weight:600;color:var(--ink);transition:background .2s">📋  Create engagement</a>
+              <a href="404.html" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:var(--mist);font-size:.85rem;font-weight:600;color:var(--ink);transition:background .2s">📊  Generate report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PANEL: Team ---- -->
+      <div class="d-panel" id="panel-team">
+        <div class="d-table">
+          <div class="d-table-head" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span>Name</span><span>Role</span><span>Current Client</span><span>Utilisation</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Arun Krishnan</span><span>Co-founder</span><span>Luminix Ventures</span><span><span class="d-badge d-badge--active">92%</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Sonia Nair</span><span>Partner, Ops</span><span>Hallcrest Mfg.</span><span><span class="d-badge d-badge--active">88%</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Ravi Verma</span><span>Partner, Tech</span><span>Comet Labs</span><span><span class="d-badge d-badge--active">76%</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Priya Mehta</span><span>Partner, Strategy</span><span>Anchorpoint</span><span><span class="d-badge d-badge--active">94%</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Karthik Raj</span><span>Sr. Analyst</span><span>Luminix Ventures</span><span><span class="d-badge d-badge--active">100%</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Deepa Iyer</span><span>Sr. Analyst</span><span>NovaMed Health</span><span><span class="d-badge d-badge--pending">64%</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1fr 1.5fr 1fr">
+            <span style="font-weight:600;color:var(--ink)">Vikram Joshi</span><span>Design Lead</span><span>Internal</span><span><span class="d-badge d-badge--completed">Away</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PANEL: Pipeline ---- -->
+      <div class="d-panel" id="panel-pipeline">
+        <div class="d-stats" style="grid-template-columns:repeat(4,1fr)">
+          <div class="d-stat">
+            <span class="d-stat-label">Lead</span>
+            <span class="d-stat-num">8</span>
+            <span class="d-stat-change">$320K potential</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Proposal</span>
+            <span class="d-stat-num">5</span>
+            <span class="d-stat-change">$240K potential</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Negotiation</span>
+            <span class="d-stat-num">3</span>
+            <span class="d-stat-change">$156K potential</span>
+          </div>
+          <div class="d-stat">
+            <span class="d-stat-label">Closed (Q3)</span>
+            <span class="d-stat-num">2</span>
+            <span class="d-stat-change is-up">$98K won</span>
+          </div>
+        </div>
+        <div class="d-table">
+          <div class="d-table-head" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Opportunity</span><span>Client</span><span>Value</span><span>Stage</span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Growth Strategy — Q4</span><span>Luminix Ventures</span><span>$72K</span><span><span class="d-badge d-badge--active">Proposal</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Supply Chain Optimisation</span><span>Hallcrest Mfg.</span><span>$54K</span><span><span class="d-badge d-badge--active">Negotiation</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Data Platform Audit</span><span>Comet Labs</span><span>$48K</span><span><span class="d-badge d-badge--pending">Lead</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Pricing Strategy — Phase 2</span><span>Anchorpoint</span><span>$36K</span><span><span class="d-badge d-badge--pending">Proposal</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Org Design Workshop</span><span>NovaMed Health</span><span>$28K</span><span><span class="d-badge d-badge--pending">Lead</span></span>
+          </div>
+          <div class="d-table-row" style="grid-template-columns:1.5fr 1.5fr 1fr 1fr">
+            <span>Tech Stack Evaluation</span><span>Zenith Retail</span><span>$42K</span><span><span class="d-badge d-badge--active">Negotiation</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PANEL: Settings ---- -->
+      <div class="d-panel" id="panel-settings">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div class="d-chart-card">
+            <h3>Firm Profile</h3>
+            <div style="display:flex;flex-direction:column;gap:16px;margin-top:12px">
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Firm Name</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">Stackly Business Consulting</div></div>
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Default Engagement Rate</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">$48,000 / engagement</div></div>
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Avg. Engagement Duration</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">14 weeks</div></div>
+            </div>
+          </div>
+          <div class="d-chart-card">
+            <h3>Billing & Invoicing</h3>
+            <div style="display:flex;flex-direction:column;gap:16px;margin-top:12px">
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Payment Terms</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">Net 30</div></div>
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Invoice Prefix</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">INV-STACKLY-</div></div>
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Tax Registration</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">GST: 33ABCDE1234F1Z5</div></div>
+            </div>
+          </div>
+          <div class="d-chart-card">
+            <h3>Engagement Defaults</h3>
+            <div style="display:flex;flex-direction:column;gap:16px;margin-top:12px">
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Standard Scope</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">Discovery → Analysis → Recommendations → Embed</div></div>
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Renewal Notice</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">30 days before end date</div></div>
+            </div>
+          </div>
+          <div class="d-chart-card">
+            <h3>Team Defaults</h3>
+            <div style="display:flex;flex-direction:column;gap:16px;margin-top:12px">
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Default Engagement Lead</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">Partner (auto-assigned by sector)</div></div>
+              <div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px">Team Size / Engagement</label><div style="padding:10px 14px;background:var(--mist);border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink)">2–3 senior operators</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

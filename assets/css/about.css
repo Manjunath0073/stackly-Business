@@ -9,7 +9,7 @@
 =================================================================== */
 .about-hero{
   position:relative;
-  padding:100px var(--gutter) 110px;
+  padding:88px var(--gutter) 80px;
   overflow:hidden;
   background:
     radial-gradient(ellipse at 75% 20%, rgba(200,169,107,.12), transparent 50%),
@@ -58,115 +58,75 @@
   border-color:var(--paper);
   background:rgba(255,255,255,.08);
 }
+.about-hero-image-frame{
+  position:relative;
+  width:100%;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  border:1px solid rgba(200,169,107,.2);
+  box-shadow:0 20px 48px -12px rgba(0,0,0,.5), inset 0 1px 0 rgba(200,169,107,.15);
+  transition:transform .5s cubic-bezier(.22,1,.36,1), box-shadow .5s cubic-bezier(.22,1,.36,1);
+  aspect-ratio:1.1;
+}
+.about-hero-image-frame:hover{
+  transform:translateY(-4px) scale(1.01);
+  box-shadow:0 32px 64px -16px rgba(200,169,107,.2), inset 0 1px 0 rgba(200,169,107,.2);
+}
+.about-hero-image{
+  display:block; width:100%; height:100%; object-fit:cover;
+  position:relative; z-index:1;
+}
+.about-hero-image-glow{
+  position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(200,169,107,.25) 0%, transparent 50%, rgba(200,169,107,.1) 100%);
+  z-index:2; pointer-events:none;
+  opacity:0; transition:opacity .6s;
+}
+.about-hero-image-frame:hover .about-hero-image-glow{ opacity:1; }
+.about-hero-image-corner{
+  position:absolute; top:-1px; right:-1px;
+  width:80px; height:80px;
+  border-style:solid;
+  border-color:rgba(200,169,107,.4) transparent transparent rgba(200,169,107,.4);
+  border-width:3px 3px 0 0;
+  border-radius:0 var(--radius-lg) 0 0;
+  z-index:4; pointer-events:none;
+  opacity:0; transition:opacity .5s;
+}
+.about-hero-image-frame:hover .about-hero-image-corner{ opacity:1; }
+.about-hero-image-stats{
+  position:absolute;
+  bottom:0; left:0; right:0;
+  display:flex; gap:0;
+  z-index:3;
+  background:linear-gradient(to top, rgba(2,6,23,.85) 0%, rgba(2,6,23,.4) 60%, transparent 100%);
+  padding:32px 20px 16px;
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+.ah-is-item{
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:2px;
+}
+.ah-is-num{
+  font-family:var(--font-display); font-weight:800;
+  font-size:1.1rem; color:var(--teal-bright);
+  line-height:1;
+}
+.ah-is-label{
+  font-size:.68rem; color:rgba(255,255,255,.55);
+  text-align:center; line-height:1.3;
+}
 .about-hero-visual{
   display:flex;
   align-items:center;
   justify-content:center;
-}
-.about-hero-panel{
-  width:100%;
-  max-width:400px;
-  aspect-ratio:.85;
-  border-radius:var(--radius-lg);
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(200,169,107,.15), transparent 55%),
-    radial-gradient(ellipse at 70% 80%, rgba(200,169,107,.08), transparent 45%),
-    linear-gradient(150deg, var(--navy-deep) 0%, #0c1628 50%, var(--navy) 100%);
-  border:1px solid rgba(200,169,107,.15);
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:24px;
-  box-shadow:0 30px 60px -20px rgba(2,6,23,.6), inset 0 1px 0 rgba(200,169,107,.1);
-}
-.about-hero-panel::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8a96b' fill-opacity='.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events:none;
-}
-.about-hero-panel-ring{
-  position:absolute;
-  top:50%; left:50%;
-  width:280px; height:280px;
-  margin:-140px 0 0 -140px;
-  border:1px solid rgba(200,169,107,.1);
-  border-radius:50%;
-  animation:ahRingSpin 30s linear infinite;
-}
-.about-hero-panel-ring--2{
-  width:200px; height:200px;
-  margin:-100px 0 0 -100px;
-  border-color:rgba(200,169,107,.06);
-  animation-direction:reverse;
-  animation-duration:20s;
-}
-@keyframes ahRingSpin{
-  to{ transform:rotate(360deg); }
-}
-.about-hero-stat-block{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:6px;
-  position:relative;
-  z-index:1;
-}
-.about-hero-stat-num{
-  font-family:var(--font-display);
-  font-weight:800;
-  font-size:clamp(3.6rem, 5.5vw, 5rem);
-  color:var(--teal-bright);
-  line-height:1;
-  letter-spacing:-.03em;
-  text-shadow:0 0 40px rgba(200,169,107,.3);
-}
-.ah-plus{ color:var(--teal-deep); font-size:.6em; vertical-align:super; }
-.about-hero-stat-block .about-hero-stat-label{
-  font-size:.82rem;
-  color:rgba(255,255,255,.55);
-  max-width:20ch;
-  text-align:center;
-  line-height:1.5;
-}
-.about-hero-badges{
-  display:flex;
-  gap:8px;
-  position:relative;
-  z-index:1;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-.ah-badge{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding:6px 14px;
-  border-radius:999px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(4px);
-}
-.ah-badge-num{
-  font-family:var(--font-display);
-  font-weight:700;
-  font-size:.75rem;
-  color:var(--teal-bright);
-}
-.ah-badge-label{
-  font-size:.7rem;
-  color:rgba(255,255,255,.5);
 }
 
 /* ===================================================================
    2. ORIGIN STORY
 =================================================================== */
 .origin-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:var(--paper);
 }
 .origin-layout{
@@ -174,7 +134,7 @@
   margin:0 auto;
   display:grid;
   grid-template-columns:1.1fr .9fr;
-  gap:70px;
+  gap:48px;
   align-items:start;
 }
 .origin-text .section-title{
@@ -183,7 +143,7 @@
 }
 .origin-paragraph{
   color:var(--ink-soft);
-  font-size:.97rem;
+  font-size:1.05rem;
   line-height:1.75;
   margin-bottom:18px;
   max-width:58ch;
@@ -212,7 +172,6 @@
   border-radius:50%;
   background:var(--paper);
   border:2.5px solid var(--teal-deep);
-  transform:translateX(-50%);
   transition:background .3s, box-shadow .3s;
 }
 .milestone-item:hover::before{
@@ -223,13 +182,13 @@
   display:block;
   font-family:var(--font-display);
   font-weight:800;
-  font-size:.85rem;
+  font-size:.92rem;
   color:var(--teal-deep);
   margin-bottom:4px;
   letter-spacing:.03em;
 }
 .milestone-desc{
-  font-size:.92rem;
+  font-size:1rem;
   color:var(--ink-soft);
   line-height:1.6;
   display:block;
@@ -240,7 +199,7 @@
    3. CORE BELIEFS
 =================================================================== */
 .beliefs-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:var(--mist);
 }
 .beliefs-grid{
@@ -293,7 +252,7 @@
 .belief-card:hover h3{ color:var(--navy); }
 .belief-card p{
   color:var(--ink-soft);
-  font-size:.92rem;
+  font-size:1rem;
   line-height:1.65;
   max-width:44ch;
 }
@@ -302,7 +261,7 @@
    4. LEADERSHIP TEAM
 =================================================================== */
 .team-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:var(--paper);
 }
 .team-grid{
@@ -361,13 +320,13 @@
 }
 .team-role{
   display:block;
-  font-size:.8rem;
+  font-size:.85rem;
   font-weight:600;
   color:var(--teal-deep);
   margin-bottom:14px;
 }
 .team-bio{
-  font-size:.85rem;
+  font-size:.92rem;
   color:var(--ink-soft);
   line-height:1.6;
   max-width:32ch;
@@ -378,7 +337,7 @@
    5. IMPACT BY NUMBERS
 =================================================================== */
 .impact-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:
     radial-gradient(ellipse at 50% 30%, rgba(200,169,107,.06), transparent 55%),
     var(--navy-deep);
@@ -419,7 +378,7 @@
   line-height:1;
 }
 .impact-label{
-  font-size:.88rem;
+  font-size:.95rem;
   color:rgba(255,255,255,.6);
 }
 
@@ -427,7 +386,7 @@
    6. CLIENT VOICES
 =================================================================== */
 .about-testimonial-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:var(--mist);
 }
 .about-testimonial-grid{
@@ -457,7 +416,7 @@
   margin-bottom:16px;
 }
 .about-testimonial-quote{
-  font-size:.94rem;
+  font-size:1rem;
   color:var(--ink-soft);
   line-height:1.7;
   flex:1;
@@ -472,23 +431,23 @@
   border-top:1px solid var(--mist-deep);
 }
 .about-testimonial-avatar{
-  width:42px; height:42px;
+  width:44px; height:44px;
   border-radius:50%;
   background:var(--navy);
   display:flex; align-items:center; justify-content:center;
   font-family:var(--font-display);
   font-weight:700;
-  font-size:.78rem;
+  font-size:.85rem;
   color:var(--paper);
   flex-shrink:0;
 }
 .about-testimonial-author strong{
   display:block;
-  font-size:.88rem;
+  font-size:.95rem;
   margin-bottom:2px;
 }
 .about-testimonial-author span{
-  font-size:.78rem;
+  font-size:.85rem;
   color:var(--ink-soft);
 }
 
@@ -496,7 +455,7 @@
    7. PRESS & RECOGNITION
 =================================================================== */
 .press-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:var(--paper);
 }
 .press-grid{
@@ -528,16 +487,25 @@
 }
 .press-card p{
   color:var(--ink-soft);
-  font-size:.9rem;
+  font-size:.95rem;
   line-height:1.65;
   font-style:italic;
+  margin-bottom:14px;
+}
+.press-card-context{
+  display:block;
+  font-size:.82rem;
+  color:var(--muted);
+  line-height:1.5;
+  padding-top:14px;
+  border-top:1px solid var(--mist-deep);
 }
 
 /* ===================================================================
    8. COMMUNITY
 =================================================================== */
 .community-section{
-  padding:120px var(--gutter);
+  padding:84px var(--gutter);
   background:
     radial-gradient(ellipse at 80% 50%, rgba(200,169,107,.06), transparent 50%),
     var(--mist);
@@ -547,7 +515,7 @@
   margin:0 auto;
   display:grid;
   grid-template-columns:1.1fr .9fr;
-  gap:70px;
+  gap:48px;
   align-items:center;
 }
 .community-text .section-title{
@@ -556,7 +524,7 @@
 }
 .community-paragraph{
   color:var(--ink-soft);
-  font-size:.97rem;
+  font-size:1.05rem;
   line-height:1.75;
   margin-bottom:18px;
   max-width:56ch;
@@ -599,13 +567,41 @@
   min-width:80px;
 }
 .community-stat-label{
-  font-size:.9rem;
+  font-size:.95rem;
   color:var(--ink-soft);
 }
 
 /* ===================================================================
+   9. CTA
+   =================================================================== */
+.cta-section{
+  margin:0 var(--gutter) 80px;
+  border-radius:var(--radius-lg);
+  padding:80px 40px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg, var(--navy-deep), var(--navy));
+}
+.cta-mesh{
+  position:absolute; inset:-20%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(127,211,184,.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(127,211,184,.18), transparent 40%);
+  animation:meshDrift 14s ease-in-out infinite alternate;
+}
+@keyframes meshDrift{
+  from{ transform:translate(0,0) rotate(0deg); }
+  to{ transform:translate(3%, -2%) rotate(6deg); }
+}
+.cta-content{ position:relative; z-index:2; max-width:640px; margin:0 auto; }
+.cta-content h2{ color:var(--paper); font-size:clamp(1.8rem, 3vw, 2.4rem); margin-bottom:16px; }
+.cta-content p{ color:rgba(255,255,255,.7); margin-bottom:32px; }
+.cta-buttons{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+/* ===================================================================
    RESPONSIVE
-=================================================================== */
+   =================================================================== */
 @media (max-width: 1100px){
   .about-hero-inner{ grid-template-columns:1fr; gap:40px; }
   .about-hero-visual{ order:-1; }
@@ -618,34 +614,34 @@
   .community-layout{ grid-template-columns:1fr; gap:48px; }
 }
 @media (max-width: 768px){
-  .about-hero{ padding:70px var(--gutter) 80px; }
+  .about-hero{ padding:56px var(--gutter) 60px; }
   .about-hero-title{ font-size:clamp(1.8rem, 6vw, 2.4rem); }
   .about-hero-panel{ max-width:280px; aspect-ratio:.9; }
-  .origin-section{ padding:80px var(--gutter); }
+  .origin-section{ padding:56px var(--gutter); }
   .origin-milestones{ padding-left:24px; }
   .milestone-item::before{ left:-24px; width:12px; height:12px; }
-  .milestone-desc{ font-size:.87rem; }
+  .milestone-desc{ font-size:.92rem; }
   .beliefs-grid{ grid-template-columns:1fr; }
   .belief-card{ padding:30px 26px; }
   .team-grid{ grid-template-columns:1fr; max-width:400px; }
   .impact-grid{ grid-template-columns:repeat(2,1fr); }
   .about-testimonial-grid{ grid-template-columns:1fr; }
   .press-grid{ grid-template-columns:1fr; }
-  .community-section{ padding:80px var(--gutter); }
+  .community-section{ padding:56px var(--gutter); }
   .community-stat-card{ padding:24px 20px; }
   .community-stat-num{ font-size:1.8rem; min-width:60px; }
-  .team-section{ padding:80px var(--gutter); }
-  .impact-section{ padding:80px var(--gutter); }
-  .about-testimonial-section{ padding:80px var(--gutter); }
-  .press-section{ padding:80px var(--gutter); }
-  .beliefs-section{ padding:80px var(--gutter); }
+  .team-section{ padding:56px var(--gutter); }
+  .impact-section{ padding:56px var(--gutter); }
+  .about-testimonial-section{ padding:56px var(--gutter); }
+  .press-section{ padding:56px var(--gutter); }
+  .beliefs-section{ padding:56px var(--gutter); }
 }
 @media (max-width: 480px){
   .impact-grid{ grid-template-columns:1fr; }
   .about-hero-panel{ max-width:240px; aspect-ratio:.9; }
   .about-hero-stat-num{ font-size:clamp(2.8rem, 8vw, 3.6rem); }
   .ah-badge{ padding:4px 10px; }
-  .ah-badge-num{ font-size:.7rem; }
-  .ah-badge-label{ font-size:.65rem; }
+  .ah-badge-num{ font-size:.75rem; }
+  .ah-badge-label{ font-size:.7rem; }
   .origin-layout{ gap:36px; }
 }

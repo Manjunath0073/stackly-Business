@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Stackly Business</title>
+<meta name="description" content="Log in to your Stackly Business account.">
+<link rel="icon" href="assets/images/logo-stackly.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body data-page="login">
+
+<main id="main" class="l-main">
+
+  <!-- ============================================================
+       1. LOGIN — full-screen centered glass card
+  ============================================================ -->
+  <section class="l-section">
+    <div class="l-bg">
+      <div class="l-grid"></div>
+      <div class="l-glow l-glow--1"></div>
+      <div class="l-glow l-glow--2"></div>
+      <div class="l-orb"></div>
+    </div>
+
+    <div class="l-card-wrap">
+      <div class="l-card">
+        <div class="l-card-inner">
+          <a href="index.html" class="l-logo" aria-label="Stackly Business — Home">
+            <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo">
+          </a>
+
+          <h1 class="l-title">Welcome back.</h1>
+          <p class="l-sub">Log in to access your dashboard, engagement reports, and billing.</p>
+
+          <div class="l-role">
+            <button type="button" class="l-role-btn is-active" data-role="client">Client</button>
+            <button type="button" class="l-role-btn" data-role="admin">Admin</button>
+          </div>
+
+          <form class="l-form" onsubmit="event.preventDefault();">
+            <div class="l-field">
+              <input type="email" class="l-input" id="l-email" required autocomplete="email" placeholder=" ">
+              <label class="l-label" for="l-email">Email address</label>
+              <span class="l-field-line"></span>
+              <span class="l-error" id="l-error-email"></span>
+            </div>
+            <div class="l-field">
+              <input type="password" class="l-input" id="l-password" required autocomplete="current-password" placeholder=" ">
+              <label class="l-label" for="l-password">Password</label>
+              <span class="l-field-line"></span>
+              <span class="l-error" id="l-error-password"></span>
+              <button type="button" class="l-pw-toggle" aria-label="Toggle password visibility">
+                <svg class="l-eye l-eye--open" viewBox="0 0 20 20" fill="none"><path d="M10 4C4 4 1 10 1 10s3 6 9 6 9-6 9-6-3-6-9-6z" stroke="currentColor" stroke-width="1.3"/><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.3"/></svg>
+                <svg class="l-eye l-eye--closed" viewBox="0 0 20 20" fill="none"><path d="M2 2L18 18M7.5 7.5a3 3 0 0 0 4.2 4.2M4.2 4.2C2.5 5.5 1 8 1 10s2 6 9 6c2 0 3.7-.6 5-1.5M10 4c6 0 9 6 9 6a12 12 0 0 1-2.2 3" stroke="currentColor" stroke-width="1.3"/></svg>
+              </button>
+            </div>
+
+            <div class="l-row">
+              <label class="l-check">
+                <input type="checkbox" class="l-check-input">
+                <span class="l-check-box"></span>
+                <span class="l-check-label">Remember me</span>
+              </label>
+              <a href="404.html" class="l-forgot">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary l-submit">Log in <span>→</span></button>
+          </form>
+
+          <p class="l-switch">Don't have an account? <a href="signup.html">Sign up <span>→</span></a></p>
+        </div>
+
+        <div class="l-card-badge">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1"/><path d="M5 8 L7 10 L11 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Secure, encrypted connection
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Stackly Business</title>
+<meta name="description" content="Reach out to Stackly Business. Strategy, operations, and technology consulting for growing companies — measured by outcomes, not hours.">
+<link rel="icon" href="assets/images/logo-stackly.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body data-page="contact">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Stackly Business — Home">
+      <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="service.html" class="nav-link" data-nav="service">Services</a></li>
+        <li><a href="blog.html" class="nav-link" data-nav="blog">Blog</a></li>
+        <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  <ul class="mobile-nav-list">
+    <li style="--i:0"><a href="index.html" class="mobile-nav-link" data-nav="home">Home</a></li>
+    <li style="--i:1"><a href="about.html" class="mobile-nav-link" data-nav="about">About</a></li>
+    <li style="--i:2"><a href="service.html" class="mobile-nav-link" data-nav="service">Services</a></li>
+    <li style="--i:3"><a href="blog.html" class="mobile-nav-link" data-nav="blog">Blog</a></li>
+    <li style="--i:4"><a href="contact.html" class="mobile-nav-link" data-nav="contact">Contact</a></li>
+  </ul>
+  <div class="mobile-actions" style="--i:5">
+    <a href="login.html" class="btn btn-outline btn-block">Log in</a>
+    <a href="signup.html" class="btn btn-primary btn-block">Get Started</a>
+  </div>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main id="main">
+
+  <!-- ============================================================
+       1. HERO — dark editorial split with quick-contact card
+       NOT split emblem (home), dark panel (about), pillars (service),
+       or featured card (blog). Uses a dark canvas with diagonal
+       grid texture + a floating contact panel on the right.
+  ============================================================ -->
+  <section class="c-hero">
+    <div class="c-hero-bg">
+      <div class="c-hero-grid"></div>
+      <div class="c-hero-glow c-hero-glow--1"></div>
+      <div class="c-hero-glow c-hero-glow--2"></div>
+    </div>
+    <div class="c-hero-inner">
+      <div class="c-hero-content reveal" data-reveal="left">
+        <span class="c-hero-badge">Get in touch</span>
+        <h1 class="c-hero-title">Let's talk about<br><span class="gold">what's next</span> for you.</h1>
+        <p class="c-hero-sub">No deck, no pitch — just a direct conversation about where you're stuck and whether we can help. Tell us a little about your work and we'll get back to you within 48 hours.</p>
+        <div class="c-hero-actions">
+          <a href="#form" class="btn btn-primary">Send a message <span>→</span></a>
+          <a href="#faq" class="c-hero-ghost">Common questions <span>↓</span></a>
+        </div>
+        <div class="c-hero-trust">
+          <div class="c-hero-trust-avatars">
+            <span>AK</span><span>SN</span><span>RV</span><span>PM</span>
+          </div>
+          <p>Reply from a partner within <strong style="color:var(--teal-bright);">48 hours</strong></p>
+        </div>
+      </div>
+      <div class="c-hero-card reveal" data-reveal="right">
+        <div class="c-hero-card-head">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.2"/><polyline points="3,7 12,13 21,7" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>Reach us directly</span>
+        </div>
+        <div class="c-hero-card-body">
+          <a href="mailto:info@thestackly.com" class="c-hero-card-item">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M3 4h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.2"/><polyline points="3,6 10,10.5 17,6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>info@thestackly.com</span>
+          </a>
+          <a href="tel:+919876543210" class="c-hero-card-item">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M17 15.5v1a1.5 1.5 0 0 1-1.5 1.5A14.5 14.5 0 0 1 1 4.5 1.5 1.5 0 0 1 2.5 3h1.5a1 1 0 0 1 1 .8c.1.6.3 1.2.5 1.8a1 1 0 0 1-.3 1L4 8.5a12 12 0 0 0 7 7.1l1.2-1.3a1 1 0 0 1 1.1-.2c.6.2 1.1.4 1.7.5a1 1 0 0 1 .8 1v1.4z" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>+91 98765 43210</span>
+          </a>
+          <div class="c-hero-card-item">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 2a6 6 0 0 0-6 6c0 4 6 10 6 10s6-6 6-10a6 6 0 0 0-6-6z" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Salem, Tamil Nadu, India</span>
+          </div>
+        </div>
+        <div class="c-hero-card-foot">
+          <span>Mon–Fri, 9 AM – 6 PM IST</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. FORM + DETAILS — split desk with animated fields
+  ============================================================ -->
+  <section class="c-form-section" id="form">
+    <div class="container">
+      <div class="c-form-layout">
+        <div class="c-form-panel reveal" data-reveal="left">
+          <span class="eyebrow">Write to us</span>
+          <h2 class="c-form-title">Tell us about your work.</h2>
+          <p class="c-form-desc">The more context you share, the more prepared we'll be for our first conversation.</p>
+          <form class="c-form" onsubmit="event.preventDefault();">
+            <div class="c-field">
+              <input type="text" class="c-input" id="c-name" required autocomplete="name">
+              <label class="c-label" for="c-name">Your name</label>
+              <span class="c-field-line"></span>
+              <span class="c-error" id="c-error-name"></span>
+            </div>
+            <div class="c-field">
+              <input type="email" class="c-input" id="c-email" required autocomplete="email">
+              <label class="c-label" for="c-email">Email address</label>
+              <span class="c-field-line"></span>
+              <span class="c-error" id="c-error-email"></span>
+            </div>
+            <div class="c-field">
+              <input type="text" class="c-input" id="c-company" autocomplete="organization">
+              <label class="c-label" for="c-company">Company name</label>
+              <span class="c-field-line"></span>
+            </div>
+            <div class="c-field c-field--textarea">
+              <textarea class="c-input c-input--textarea" id="c-message" rows="4" required></textarea>
+              <label class="c-label" for="c-message">What are you working on?</label>
+              <span class="c-field-line"></span>
+              <span class="c-error" id="c-error-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary c-submit">
+              <span class="c-submit-text">Send message</span>
+              <span class="c-submit-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M2 10 L18 10 M12 4 L18 10 L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="c-success" id="c-success">✓ Message sent. We'll be in touch within 24 hours.</div>
+          </form>
+        </div>
+        <div class="c-details-panel reveal" data-reveal="right">
+          <div class="c-details-connector"></div>
+          <div class="c-detail-item">
+            <div class="c-detail-icon">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 4h12c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1V5c0-.6.4-1 1-1z" stroke="currentColor" stroke-width="1.2"/><polyline points="3,6 10,10.5 17,6" stroke="currentColor" stroke-width="1.2"/></svg>
+            </div>
+            <div class="c-detail-body">
+              <h4>Email us</h4>
+              <a href="mailto:info@thestackly.com" class="c-detail-link">info@thestackly.com</a>
+              <p>We reply within 48 hours — usually sooner.</p>
+            </div>
+          </div>
+          <div class="c-detail-item">
+            <div class="c-detail-icon">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M17 15.5v1a1.5 1.5 0 0 1-1.5 1.5A14.5 14.5 0 0 1 1 4.5 1.5 1.5 0 0 1 2.5 3h1.5a1 1 0 0 1 1 .8c.1.6.3 1.2.5 1.8a1 1 0 0 1-.3 1L4 8.5a12 12 0 0 0 7 7.1l1.2-1.3a1 1 0 0 1 1.1-.2c.6.2 1.1.4 1.7.5a1 1 0 0 1 .8 1v1.4z" stroke="currentColor" stroke-width="1.2"/></svg>
+            </div>
+            <div class="c-detail-body">
+              <h4>Call us</h4>
+              <a href="tel:+919876543210" class="c-detail-link">+91 98765 43210</a>
+              <p>Mon–Fri, 9:00 AM – 6:00 PM IST</p>
+            </div>
+          </div>
+          <div class="c-detail-item">
+            <div class="c-detail-icon">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2a6 6 0 0 0-6 6c0 4 6 10 6 10s6-6 6-10a6 6 0 0 0-6-6z" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.2"/></svg>
+            </div>
+            <div class="c-detail-body">
+              <h4>Visit us</h4>
+              <address class="c-detail-address">Salem, Tamil Nadu, India</address>
+              <p>Available by appointment — we're just off Old Mahabalipuram Road.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. OFFICES — postcard-style location cards
+  ============================================================ -->
+  <section class="c-offices-section">
+    <div class="container">
+      <div class="section-head center reveal" data-reveal="up">
+        <span class="eyebrow">Our desks</span>
+        <h2 class="section-title">Where to find us.</h2>
+        <p class="section-sub">Two offices, one time zone. We work mostly remote but keep desks in both cities for meetings and deep work.</p>
+      </div>
+      <div class="c-offices-grid">
+        <article class="c-office reveal" data-reveal="up" style="--offset:0">
+          <div class="c-office-img" style="background-image:url('assets/images/office-chennai.webp')"></div>
+          <div class="c-office-stamp">
+            <span class="c-office-stamp-text">Principal</span>
+          </div>
+          <div class="c-office-body">
+            <div class="c-office-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="8" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M4 8 L12 3 L20 8" stroke="currentColor" stroke-width="1.2"/><line x1="12" y1="14" x2="12" y2="18" stroke="currentColor" stroke-width="1.2"/></svg>
+            </div>
+            <h3 class="c-office-name">Salem</h3>
+            <p class="c-office-address">5-Star Business Centre,<br>Omalur Main Road,<br>Salem — 636 004</p>
+            <a href="404.html" class="c-office-link">Get directions <span>→</span></a>
+          </div>
+        </article>
+        <article class="c-office reveal" data-reveal="up" style="--offset:1">
+          <div class="c-office-img" style="background-image:url('assets/images/office-bangalore.webp')"></div>
+          <div class="c-office-stamp">
+            <span class="c-office-stamp-text">Satellite</span>
+          </div>
+          <div class="c-office-body">
+            <div class="c-office-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="8" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M4 8 L12 3 L20 8" stroke="currentColor" stroke-width="1.2"/><line x1="12" y1="14" x2="12" y2="18" stroke="currentColor" stroke-width="1.2"/></svg>
+            </div>
+            <h3 class="c-office-name">Bangalore</h3>
+            <p class="c-office-address">IndiQube, 8th Block,<br>Koramangala,<br>Bangalore — 560 034</p>
+            <a href="404.html" class="c-office-link">Get directions <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. MAP — embedded Google Maps for Stackly Salem office
+  ============================================================ -->
+  <section class="c-map-section">
+    <div class="container">
+      <div class="c-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31272.373902018296!2d78.14769245!3d11.6518129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1c2e5b4a2c5%3A0x52e7c0e0a5a5a5a5!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stackly Salem office location"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. FAQ — fold accordion with roman numerals
+  ============================================================ -->
+  <section class="c-faq-section" id="faq">
+    <div class="container">
+      <div class="c-faq-layout">
+        <div class="c-faq-head reveal" data-reveal="left">
+          <span class="eyebrow">Questions</span>
+          <h2 class="section-title">Common enquiries.</h2>
+          <p class="section-sub">Quick answers to the things most people ask before reaching out. If yours isn't here, the form is just a scroll away.</p>
+        </div>
+        <div class="c-faq-list reveal" data-reveal="right">
+          <div class="c-faq-item">
+            <button class="c-faq-q" aria-expanded="false">
+              <span class="c-faq-num">I</span>
+              <span class="c-faq-q-text">What does an engagement typically cost?</span>
+              <span class="c-faq-arrow">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6 L8 10 L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="c-faq-a-wrap">
+              <div class="c-faq-a">
+                <p>Every engagement is scoped and priced individually based on the outcome you need. Discovery sprints start at ₹2.5L, full engagements typically range from ₹8L–₹25L. We publish our pricing philosophy on our services page — no hidden fees, no hourly creep.</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-faq-item">
+            <button class="c-faq-q" aria-expanded="false">
+              <span class="c-faq-num">II</span>
+              <span class="c-faq-q-text">How long do engagements usually last?</span>
+              <span class="c-faq-arrow">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6 L8 10 L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="c-faq-a-wrap">
+              <div class="c-faq-a">
+                <p>Most engagements run 6–12 weeks from kickoff to handoff. Strategy sprints can be as short as 2 weeks, while embedded advisory relationships often extend to a full quarter or more. We size the timeline to the outcome, not the other way around.</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-faq-item">
+            <button class="c-faq-q" aria-expanded="false">
+              <span class="c-faq-num">III</span>
+              <span class="c-faq-q-text">Do you work with early-stage startups?</span>
+              <span class="c-faq-arrow">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6 L8 10 L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="c-faq-a-wrap">
+              <div class="c-faq-a">
+                <p>We focus on companies that have found product-market fit and are scaling past 20 people — typically between Series A and Series C. For earlier-stage founders, we offer free monthly office hours. Check our community page for details.</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-faq-item">
+            <button class="c-faq-q" aria-expanded="false">
+              <span class="c-faq-num">IV</span>
+              <span class="c-faq-q-text">What happens after I submit the form?</span>
+              <span class="c-faq-arrow">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6 L8 10 L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="c-faq-a-wrap">
+              <div class="c-faq-a">
+                <p>A partner will review your message within 48 hours. If it looks like a good fit, we'll schedule a 30-minute call — no deck, no pitch. Just a direct conversation about where you're stuck and whether we can help. If it's not a fit, we'll say so honestly and point you to resources that might be useful.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. CTA — warm anchor with topographic pattern
+  ============================================================ -->
+  <section class="c-cta-section">
+    <div class="c-cta-map"></div>
+    <div class="container">
+      <div class="c-cta-card">
+        <span class="eyebrow">Ready?</span>
+        <h2 class="c-cta-title">Tell us what you're building.</h2>
+        <p class="c-cta-desc">We'll tell you honestly if we can help — and if we can't, we'll point you to someone who can.</p>
+        <a href="#form" class="btn btn-primary">Send a message <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wave"></div>
+  <div class="footer-inner">
+    <div class="footer-col footer-col--brand">
+      <a href="index.html" class="footer-logo-link" aria-label="Stackly Business — Home">
+        <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo" class="footer-logo">
+      </a>
+      <p class="footer-tagline">Strategy, operations, and technology consulting for growing companies — measured by outcomes, not hours.</p>
+      <div class="footer-social">
+        <a href="404.html" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="404.html" class="footer-social-link" aria-label="X / Twitter" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="404.html" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <h5>Company</h5>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="404.html" class="footer-link">Team</a>
+      <a href="404.html" class="footer-link">Careers</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <h5>Services</h5>
+      <a href="404.html" class="footer-link">Growth Strategy</a>
+      <a href="404.html" class="footer-link">Operations Excellence</a>
+      <a href="404.html" class="footer-link">Technology Enablement</a>
+      <a href="404.html" class="footer-link">Embedded Advisory</a>
+    </div>
+
+    <div class="footer-col footer-col--contact">
+      <h5>Connect</h5>
+      <span class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Salem, Tamil Nadu, India
+      </span>
+      <a href="404.html" class="footer-contact-item footer-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@thestackly.com
+      </a>
+      <a href="404.html" class="footer-contact-item footer-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 98765 43210
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Stackly Business. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="404.html" class="footer-bottom-link">Privacy</a>
+      <a href="404.html" class="footer-bottom-link">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

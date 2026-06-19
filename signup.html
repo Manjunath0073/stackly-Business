@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up — Stackly Business</title>
+<meta name="description" content="Create your Stackly Business account.">
+<link rel="icon" href="assets/images/logo-stackly.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/signup.css">
+</head>
+<body data-page="signup">
+
+<main id="main" class="s-main">
+
+  <!-- ============================================================
+       1. SIGN-UP — premium split
+  ============================================================ -->
+  <section class="s-section">
+
+    <!-- left — form -->
+    <div class="s-form-panel">
+      <div class="s-form-wrap">
+        <a href="index.html" class="s-logo" aria-label="Stackly Business — Home">
+          <img src="assets/images/logo-stackly.webp" alt="Stackly Business logo">
+        </a>
+
+        <div class="s-head">
+          <h1 class="s-title">Create your account</h1>
+        </div>
+
+        <div class="s-role">
+          <button type="button" class="s-role-btn is-active" data-role="client">Client</button>
+          <button type="button" class="s-role-btn" data-role="admin">Admin</button>
+        </div>
+
+        <form class="s-form" onsubmit="event.preventDefault();">
+          <div class="s-field">
+            <input type="text" class="s-input" id="s-name" required autocomplete="name" placeholder=" ">
+            <label class="s-label" for="s-name">Full name</label>
+            <span class="s-field-line"></span>
+            <span class="s-error" id="s-error-name"></span>
+          </div>
+
+          <div class="s-field">
+            <input type="email" class="s-input" id="s-email" required autocomplete="email" placeholder=" ">
+            <label class="s-label" for="s-email">Email address</label>
+            <span class="s-field-line"></span>
+            <span class="s-error" id="s-error-email"></span>
+          </div>
+
+          <div class="s-field">
+            <input type="text" class="s-input" id="s-company" autocomplete="organization" placeholder=" ">
+            <label class="s-label" for="s-company">Company name <span class="s-opt">(optional)</span></label>
+            <span class="s-field-line"></span>
+          </div>
+
+          <div class="s-field">
+            <input type="password" class="s-input" id="s-password" required autocomplete="new-password" placeholder=" ">
+            <label class="s-label" for="s-password">Password</label>
+            <span class="s-field-line"></span>
+            <span class="s-error" id="s-error-password"></span>
+            <div class="s-strength" id="s-strength">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="s-field">
+            <input type="password" class="s-input" id="s-confirm" required autocomplete="new-password" placeholder=" ">
+            <label class="s-label" for="s-confirm">Confirm password</label>
+            <span class="s-field-line"></span>
+            <span class="s-match" id="s-match"></span>
+            <span class="s-error" id="s-error-confirm"></span>
+          </div>
+
+          <label class="s-check">
+            <input type="checkbox" class="s-check-input" id="s-terms" required>
+            <span class="s-check-box"></span>
+            <span class="s-check-label">I agree to the <a href="404.html">Terms of Service</a> and <a href="404.html">Privacy Policy</a>.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary s-submit">
+            Create account <span>→</span>
+          </button>
+        </form>
+
+        <p class="s-switch">Already have an account? <a href="login.html">Log in <span>→</span></a></p>
+
+        <div class="s-shield">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M8 1L2 3v4c0 5 6 8 6 8s6-3 6-8V3L8 1z" stroke="currentColor" stroke-width="1.1" fill="none"/><path d="M5 8L7 10L11 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Enterprise-grade encryption. Your data is protected.
+        </div>
+      </div>
+    </div>
+
+    <!-- right — brand panel -->
+    <div class="s-brand-panel">
+      <div class="s-brand-bg"></div>
+      <div class="s-brand-shape"></div>
+      <div class="s-brand-content">
+        <span class="s-brand-badge">Trusted by 200+ companies</span>
+        <p class="s-brand-quote">
+          “Stackly gave us the clarity to scale. Their strategic model transformed how we approach growth — in just six weeks.”
+        </p>
+        <div class="s-brand-author">
+          <div class="s-brand-avatar">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="rgba(201,169,107,.15)"/><text x="20" y="24" text-anchor="middle" fill="var(--gold)" font-size="14" font-weight="700" font-family="Plus Jakarta Sans">MR</text></svg>
+          </div>
+          <div>
+            <strong>Maya Rodriguez</strong>
+            <span>CEO, Luminix Ventures</span>
+          </div>
+        </div>
+
+        <div class="s-brand-stats">
+          <div class="s-brand-stat">
+            <span class="s-brand-num">14&nbsp;×</span>
+            <span class="s-brand-desc">avg. engagement lift</span>
+          </div>
+          <div class="s-brand-stat">
+            <span class="s-brand-num">92%</span>
+            <span class="s-brand-desc">client retention</span>
+          </div>
+          <div class="s-brand-stat">
+            <span class="s-brand-num">34&nbsp;min</span>
+            <span class="s-brand-desc">avg. time to first<br>strategic insight</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="assets/js/signup.js"></script>
+</body>
+</html>

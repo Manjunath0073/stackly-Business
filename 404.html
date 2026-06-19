@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page Not Found — Stackly Business</title>
 <meta name="description" content="The page you're looking for doesn't exist.">
-<link rel="icon" href="assets/images/logo-stackly.png">
+<link rel="icon" href="assets/images/logo-stackly.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +16,30 @@
 <body data-page="404">
 
 <main id="main">
-  <section class="section-404">
+  <section class="page-404">
+    <div class="page-404-bg">
+      <svg class="page-404-shape page-404-shape--1" viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="180" stroke="rgba(200,169,107,.08)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="120" stroke="rgba(200,169,107,.06)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="60" stroke="rgba(200,169,107,.04)" stroke-width="1"/>
+      </svg>
+      <svg class="page-404-shape page-404-shape--2" viewBox="0 0 300 300" fill="none">
+        <path d="M30 270 L150 30 L270 270" stroke="rgba(200,169,107,.05)" stroke-width="1"/>
+        <path d="M80 240 L150 80 L220 240" stroke="rgba(200,169,107,.04)" stroke-width="1"/>
+      </svg>
+      <svg class="page-404-shape page-404-shape--3" viewBox="0 0 200 200" fill="none">
+        <rect x="10" y="10" width="180" height="180" rx="10" stroke="rgba(200,169,107,.06)" stroke-width="1"/>
+        <rect x="35" y="35" width="130" height="130" rx="6" stroke="rgba(200,169,107,.04)" stroke-width="1"/>
+      </svg>
+    </div>
     <div class="container">
-      <div class="content-404">
-        <span class="num-404">404</span>
+      <div class="page-404-card">
+        <span class="page-404-code">404</span>
+        <div class="page-404-line"></div>
         <h1>This page doesn't exist.</h1>
-        <p>The link you followed may be broken, or the page may have been removed.</p>
-        <div class="actions-404">
-          <a href="index.html" onclick="history.back();return false;" class="btn btn-outline">Go back</a>
+        <p>The link you followed may be broken, or the page may have been moved. Let's get you back on track.</p>
+        <div class="page-404-actions">
+          <a href="index.html" onclick="history.back();return false;" class="btn btn-outline btn-404-back">Go back</a>
           <a href="index.html" class="btn btn-primary">Back to home <span>→</span></a>
         </div>
       </div>
