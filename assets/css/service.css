@@ -151,7 +151,26 @@
   background:linear-gradient(90deg, rgba(2,6,23,.94) 25%, rgba(26,20,14,.88) 55%, rgba(26,20,14,.82));
 }
 .svc-section .container{ position:relative; z-index:1; }
-.svc-strategy{ background:var(--mist); }
+.svc-strategy{
+  background:var(--navy-deep);
+  color:var(--paper);
+}
+.svc-strategy .svc-section-bg::after{
+  background:linear-gradient(90deg, rgba(2,6,23,.9) 30%, rgba(2,6,23,.84) 60%, rgba(2,6,23,.76));
+}
+.svc-strategy .eyebrow{ color:var(--teal-bright); }
+.svc-strategy .eyebrow::before{ background:var(--teal-bright); }
+.svc-strategy .svc-split-content h2{ color:var(--paper); }
+.svc-strategy .svc-split-content > p{ color:rgba(255,255,255,.7); }
+.svc-strategy .svc-deliverables-label{ color:rgba(255,255,255,.5); }
+.svc-strategy .svc-deliverable{ color:rgba(255,255,255,.85); }
+.svc-strategy .svc-split-stat-value{ color:var(--teal-bright); }
+.svc-strategy .svc-split-stat-label{ color:rgba(255,255,255,.6); }
+.svc-strategy .svc-timeline-step{ color:var(--teal-bright); }
+.svc-strategy .svc-timeline-node h4{ color:var(--paper); }
+.svc-strategy .svc-timeline-node p{ color:rgba(255,255,255,.7); }
+.svc-strategy .svc-timeline-duration{ color:rgba(255,255,255,.5); }
+.svc-strategy .svc-timeline-node::before{ border-color:var(--teal-bright); }
 .svc-split{
   max-width:var(--container); margin:0 auto;
   display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;
@@ -438,8 +457,22 @@
    4. TECHNOLOGY — capability grid + pull quote
 =================================================================== */
 .svc-technology{
-  background:var(--mist);
+  background:var(--navy-deep);
+  color:var(--paper);
 }
+.svc-technology .svc-section-bg::after{
+  background:linear-gradient(90deg, rgba(2,6,23,.9) 30%, rgba(2,6,23,.84) 60%, rgba(2,6,23,.76));
+}
+.svc-technology .eyebrow{ color:var(--teal-bright); }
+.svc-technology .eyebrow::before{ background:var(--teal-bright); }
+.svc-technology .svc-split-content h2{ color:var(--paper); }
+.svc-technology .svc-split-content > p{ color:rgba(255,255,255,.7); }
+.svc-technology .svc-pullquote{ color:rgba(255,255,255,.8); border-left-color:var(--teal-bright); }
+.svc-technology .svc-tech-stat{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.1);
+}
+.svc-technology .svc-tech-stat strong{ color:var(--teal-bright); }
 .svc-grid-showcase{
   display:grid;
   grid-template-columns:1fr 1fr;
