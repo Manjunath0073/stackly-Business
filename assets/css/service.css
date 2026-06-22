@@ -142,13 +142,13 @@
 }
 .svc-section-bg::after{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(90deg, rgba(245,245,240,.95) 30%, rgba(245,245,240,.7) 60%, rgba(245,245,240,.4));
+  background:linear-gradient(90deg, rgba(245,245,240,.95) 30%, rgba(245,245,240,.88) 60%, rgba(245,245,240,.82));
 }
 .svc-operations .svc-section-bg::after{
-  background:linear-gradient(90deg, rgba(2,6,23,.94) 30%, rgba(2,6,23,.7) 60%, rgba(2,6,23,.4));
+  background:linear-gradient(90deg, rgba(2,6,23,.94) 30%, rgba(2,6,23,.88) 60%, rgba(2,6,23,.82));
 }
 .svc-advisory .svc-section-bg::after{
-  background:linear-gradient(90deg, rgba(2,6,23,.94) 25%, rgba(26,20,14,.7) 55%, rgba(26,20,14,.35));
+  background:linear-gradient(90deg, rgba(2,6,23,.94) 25%, rgba(26,20,14,.88) 55%, rgba(26,20,14,.82));
 }
 .svc-section .container{ position:relative; z-index:1; }
 .svc-strategy{ background:var(--mist); }
@@ -718,6 +718,8 @@
   font-size:.95rem;
 }
 .svc-cta-buttons{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.svc-cta .btn-outline{ border-color:rgba(255,255,255,.25); color:var(--paper); }
+.svc-cta .btn-outline:hover{ border-color:var(--teal-bright); background:rgba(200,169,107,.12); }
 
 /* ===================================================================
    RESPONSIVE

@@ -19,9 +19,14 @@
   <!-- ============ SIDEBAR ============ -->
   <aside class="d-sidebar">
     <div class="d-sidebar-inner">
-      <a href="index.html" class="d-logo">
-        <img src="assets/images/logo-stackly.webp" alt="Stackly Business">
-      </a>
+      <div class="d-sidebar-header">
+        <a href="index.html" class="d-logo">
+          <img src="assets/images/logo-stackly.webp" alt="Stackly Business">
+        </a>
+        <button class="d-sidebar-close" aria-label="Close sidebar">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+      </div>
 
       <div class="d-user">
         <div class="d-user-avatar"></div>
@@ -32,19 +37,19 @@
       </div>
 
       <nav class="d-nav">
-        <button class="d-nav-btn is-active" data-panel="panel-overview">
+        <button class="d-nav-btn is-active" data-panel="panel-overview" data-title="Overview">
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="7" height="7" rx="1"/><rect x="11" y="2" width="7" height="3" rx="1"/><rect x="11" y="7" width="7" height="11" rx="1"/><rect x="2" y="11" width="7" height="7" rx="1"/></svg>
           Overview
         </button>
-        <button class="d-nav-btn" data-panel="panel-engagements">
+        <button class="d-nav-btn" data-panel="panel-engagements" data-title="Engagements">
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10h4l2 6 4-12 2 6h4"/></svg>
           Engagements
         </button>
-        <button class="d-nav-btn" data-panel="panel-reports">
+        <button class="d-nav-btn" data-panel="panel-reports" data-title="Reports">
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h12v14H4z"/><path d="M8 8h4M8 12h4"/></svg>
           Reports
         </button>
-        <button class="d-nav-btn" data-panel="panel-billing">
+        <button class="d-nav-btn" data-panel="panel-billing" data-title="Billing">
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M7 10h6"/></svg>
           Billing
         </button>
@@ -57,11 +62,18 @@
     </div>
   </aside>
 
+  <div class="d-sidebar-overlay"></div>
+
   <!-- ============ MAIN ============ -->
   <div class="d-main">
 
     <header class="d-topbar">
-      <h2 id="panel-title">Overview</h2>
+      <div class="d-topbar-left">
+        <button class="d-hamburger" aria-label="Toggle sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <h2 id="panel-title">Overview</h2>
+      </div>
       <div class="d-topbar-right">
         <span class="d-topbar-date"></span>
       </div>

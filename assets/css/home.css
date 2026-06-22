@@ -707,7 +707,7 @@
 .industry-card-content{
   position:absolute; left:0; right:0; bottom:0;
   padding:22px 24px;
-  background:rgba(2,6,23,.55);
+  background:rgba(2,6,23,.75);
   backdrop-filter:blur(8px);
   -webkit-backdrop-filter:blur(8px);
   border-top:1px solid rgba(255,255,255,.06);
@@ -715,7 +715,7 @@
   transition:background .4s var(--ease);
 }
 .industry-card:hover .industry-card-content{
-  background:rgba(2,6,23,.7);
+  background:rgba(2,6,23,.85);
 }
 .industry-card-num{
   font-family:var(--font-display); font-weight:800;
@@ -849,9 +849,7 @@
 .testimonial-person{ display:flex; align-items:center; justify-content:center; gap:12px; }
 .testimonial-avatar{
   width:46px; height:46px; border-radius:50%;
-  background:var(--navy);
-  display:flex; align-items:center; justify-content:center;
-  color:var(--paper); font-family:var(--font-display); font-weight:700; font-size:.85rem;
+  object-fit:cover; display:block; flex-shrink:0;
 }
 .testimonial-person h5{ font-size:.95rem; }
 .testimonial-person span{ font-size:.82rem; color:var(--ink-soft); }

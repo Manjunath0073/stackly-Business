@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if(!cValidName(name)){ cShowError('c-error-name','Only letters and spaces allowed.'); document.querySelector('#c-name').classList.add('is-error'); ok=false; }
       if(!cValidEmail(email)){ cShowError('c-error-email','Please enter a valid email address.'); document.querySelector('#c-email').classList.add('is-error'); ok=false; }
       if(!message){ cShowError('c-error-message','Message cannot be empty.'); document.querySelector('#c-message').classList.add('is-error'); ok=false; }
+      else if(message.length < 10){ cShowError('c-error-message','Message must be at least 10 characters.'); document.querySelector('#c-message').classList.add('is-error'); ok=false; }
       if(!ok) return;
       if(success) success.classList.add('is-visible');
       form.reset();
